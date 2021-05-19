@@ -1,0 +1,44 @@
+.block-with-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+@media (max-width: 767px) {
+.bg-blend::after {
+content: url("data:image/svg+xml,%3Csvg version='1.1' id='Calque_1' xmlns:cc='http://creativecommons.org/ns%23' xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23' xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd' xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 54.8 34.6' style='enable-background:new 0 0 54.8 34.6;' xml:space='preserve'%3E%3Cpolygon fill='%23333' points='0,14.2 0,20.5 42.7,20.5 33,30.2 37.5,34.6 54.8,17.3 37.5,0 33,4.5 42.7,14.2 '/%3E%3C/svg%3E");
+opacity:1;
+}
+.bg-img::before {
+    background-color: var(--secondary-color);
+    opacity: .75;
+        z-index: 2;
+}
+.bg-img h3 {
+    z-index: 10;
+    color: var(--on-secondary-color);
+}
+
+
+}
+.bg-img:hover::before {
+    opacity: 1;
+
+}
+
+@media (min-width: 1350px) {
+
+.bg-img:hover::before {
+    opacity: 0;
+}
+}
+
+.bg-img:hover {
+    text-decoration: none;
+}
+
+.img-fluid:hover + .btn-close {
+    opacity: 1;
+    background-color: var(--secondary-color); 
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.88, user-scalable=no, maximum-scale=0.88" />
+	<title>Objectifs_html</title>
+	<link href="../../engine/css/screens.min.css" rel="stylesheet" type="text/css" />
+	<link href="../../engine/css/fonts.css" rel="stylesheet" type="text/css"/>
+	<link href="../../engine/css/customization.css" rel="stylesheet" type="text/css"/>
+	<link href="css/screen.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/polyfills/css-vars-ponyfill.min.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/jquery.min.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/angular.min.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/modernizr-custom.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="js/app-run.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="js/app-controler.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="localisation/localisation.js"></script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script type="text/javascript" charset="UTF-8">
+	//obfusquer
+	this.tracker = null;
+	this.params = {
+		//Texte du titre
+		title: "Training objectives",
+		//Texte du sous titre
+		subtitle: "After completing this training course, you will be able to:",
+		//Texte de la boite d'attention
+		warningText: "<span>This course duration is approximately 30min.<\/span>",
+		//Liste ds objectifs
+		enum:{
+			"obj_1":{text:"<span>Understand that acoustics is the core of AST Parts.<\/span>"},
+			"obj_2":{text:"<span>How work our parts to reduce noise in the vehicle.<\/span>"},
+			"obj_3":{text:"<span>Know that everyone has to know it and contribute to it.<\/span>"},
+			"obj_4":{text:""},
+			"obj_5":{text:""},
+			"obj_6":{text:""},
+			"obj_7":{text:""},
+			"obj_8":{text:""},
+		},
+		//son associé à l'écran
+		sound: "",
+		icone: "clock.png"
+	};
+	var bridge = null;
+	function setTracker(pBridge){
+		bridge = pBridge;
+		//Initialisation du jeu lorsque la communication avec la meta à été établie
+		setTimeout(function(){
+			$("#container").scope().init();
+			$("#container").scope().$apply();
+		}, 10);
+	}
+	//finobfusquer
+	</script>
+</head>
+
+<body id="objectifs"
+	  ng-app="cannelle_app">
+	<div id="container"
+		 role="main"
+		 ng-controller="cannelle_appCtrl">
+		<div class="container-fluid">
+			<div class="row delayed h-100 fh-100 minh-100 align-items-center justify-content-center">
+				<!--Bloc main-->
+				<div class="col-12 col-sm-12 col-md-10 col-xl-8 d-md-flex delayed align-items-center justify-content-center px-3 col-tablet">
+					<div class="row w-100 justify-content-center align-items-center content m-0">
+						<div class="d-md-flex maxh-100 minh-xl-100 w-0 p-0 m-0">
+						</div>
+						<div class="col-12 d-md-flex flex-column py-3 py-md-5 px-0">
+							<div class="m-auto">
+								<!--Bandeau Titre-->
+								<div id="bandeau-titre" class="d-flex bandeau">
+									<h2 class="fadeInDown blockquote mb-3 px-3 py-1"
+										ng-if="subtitle!=''"
+										ng-bind-html="subtitle">
+									</h2>
+								</div>
+								<!--Objectifs-->
+								<div class="col py-3 px-0">
+									<div class="card-columns delayed">
+										<div id="{{key}}" class="card mb-3 border-0 box-shadow-2 shadow-sm rounded fadeIn"
+											 ng-repeat="(key,value) in enum"
+											 ng-if="value.text != ''">
+											<div class="d-flex card-body ">
+												<p class="card-title mb-0 align-self-center"
+												   ng-bind-html="value.text" ></p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--Mise en évidence-->
+								<div class="col fadeInUp pb-3 px-0"
+									 ng-if="warningText.trim() != ''">
+									<div class="media warning-box p-4 bg-gray-light rounded fadeInUp">
+										<img class="medium img-fluid mr-4 mt-1"
+											 src="{{icone}}"
+											 alt="{{icone}}" />
+										<div class="media-body align-self-center">
+											<p class="my-0 text"
+												 ng-bind-html="warningText">
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--EndOf Bloc Main-->
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

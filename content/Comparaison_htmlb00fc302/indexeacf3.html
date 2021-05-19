@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.88, user-scalable=no, maximum-scale=0.88"/>
+    <title>Comparaison_html</title>
+    <link href="../../engine/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../../engine/css/screens.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../../engine/css/fonts.css" rel="stylesheet" type="text/css"/>
+    <link href="../../engine/css/customization.css" rel="stylesheet" type="text/css"/>
+    <link href="css/screen.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" charset="UTF-8" src="../../engine/js/polyfills/css-vars-ponyfill.min.js"></script>
+    <script type="text/javascript" src="../../engine/js/polyfills/webp-polyfills.js"></script>
+    <script type="text/javascript" src="../../engine/js/polyfills/webp-hero.bundle.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="../../engine/js/jquery.min.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="../../engine/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="../../engine/js/angular.min.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="../../engine/js/modernizr-custom.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/app-run.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/app-controler.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="localisation/localisation.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript" charset="UTF-8">
+    //obfusquer
+    this.tracker = null;
+    this.params = {
+        //Texte du titre
+        title: "How is managed the acoustic comfort with our parts?   (Insulation - Mass Spring system - 1)",
+        //Texte du sous titre
+        subtitle: "What does it mean insulation?<br\/><br\/>3- Mass Law vs Mass-Spring system<br\/><br\/>More efficiently than only using an inert mass to reduce the noise transmission, a physical principle is used, called Mass-Spring System.",
+        //son associé à l'écran
+        sound: "",
+        //Titre de la colonne 1
+        title1:"Mass Law",
+        //Texte / illustration de la colonne 1
+        text1:"<span>Considering a pendula with a mass “m”,<br\/><br\/>On sketch 1, the character representing the noise excitation, the noise transmission is represented by the movement of the pendula.<br\/><br\/>On sketch 2, with a heavier pendula of mass “M”, and with same noise excitation level, the movement of the pendula is reduced: better noise insulation <\/span>",
+        illustration1:"GIF-mass-law.gif",
+        illustrationAlt1: "illusAlt1",
+        //Titre de la colonne 2
+        title2:"Mass-Spring system",
+        //Texte / illustration de la colonne 2
+        text2:"<span>Because is not possible to increase surface mass of the BiW without increasing the vehicle mass, another physical principle is used to improve noise insulation:<br\/><br\/>                - A second layer of mass “m’ “ is added with a spring in-between, like on sketch 3<br\/><br\/>               - Still with the same noise excitation level than on sketches 1 &amp; 2, the noise transmission, represented by the movement of the second mass “m’ ”, is reduced, due to the mass-spring effect.<\/span>",
+        illustration2:"GIF-mass-spring-system.gif",
+        illustrationAlt2: "illusAlt2"
+    };
+    var bridge = null;
+
+    function setTracker(pBridge) {
+        bridge = pBridge;
+        //Initialisation du jeu lorsque la communication avec la meta à été établie
+        setTimeout(function(){
+            $("#container").scope().init();
+            $("#container").scope().$apply();
+        }, 10);
+    }
+
+    //finobfusquer
+    </script>
+</head>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <defs>
+        <symbol id="icon-cross" viewBox="0 0 20.3 20.3">
+            <path d="M11.6,10.2L20,1.7c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0l-8.4,8.4L1.7,0.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l8.4,8.4l-8.4,8.4
+                c-0.4,0.4-0.4,1,0,1.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l8.4-8.4l8.4,8.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3
+                c0.4-0.4,0.4-1,0-1.4L11.6,10.2z"/>
+        </symbol>
+    </defs>
+</svg>
+<body ng-app="cannelle_app" id="comparaison">
+    <div id="container"
+         role="main"
+         ng-controller="cannelle_appCtrl">
+        <div class="container-fluid">
+            <div class="row delayed h-100 fh-100 minh-100 align-items-center justify-content-center">
+                <!--Bloc main-->
+                <div class="col-12 d-md-flex justify-content-center align-items-center delayed px-0 py-3 py-md-3 py-lg-5 py-xl-5">
+                    <!--Bandeau Titre-->
+                    <div class="row w-100 justify-content-center align-items-center delayed content m-0">
+                        <div class="col-12 col-sm-12 col-md-10 col-xl-8 d-md-flex pb-xl-3 col-tablet">
+                            <div class="d-md-flex justify-content-center align-items-center w-100">
+                                <div id="bandeau-titre" class="d-flex bandeau">
+                                    <h2 class="fadeInDown blockquote my-3 px-3 py-1 w-100"
+                                        ng-if="subtitle!=''"
+                                        ng-bind-html="subtitle">
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-11 col-lg-11 col-xl-10 d-md-flex p-0 col-tablet">
+                            <div class="d-md-flex justify-content-center align-items-start w-100">
+                                <div class="col d-md-flex h-100 fadeInUp my-3 my-md-0 pr-md-3 pr-xl-4">
+                                    <div class="d-md-flex flex-column w-100 secondary-color">
+                                        <!--Picture-->
+                                        <div class="w-100 d-flex justify-content-center align-items-center mb-3 mb-md-0 overflow-hidden"
+                                           data-toggle="modal" data-target="#modal-img-1"
+                                           ng-if="illustration1 != ''">
+                                            <a class="bg-img rounded shadow justify-content-center align-items-center m-auto w-100"
+                                               href="#">
+                                                <img class="rounded" src="{{illustration1}}" alt="{{illustrationAlt1}}">
+                                                <h3 class="d-flex d-md-none text-center p-3 block-with-text z-index-1 title-color title"
+                                                    ng-if="title1 != ''"
+                                                    ng-bind-html="title1"></h3>
+                                            </a>
+                                        </div>
+                                        <h4 class="d-none d-md-block mt-3 title-color title h3"
+                                            ng-if="title1 != ''"
+                                            ng-bind-html="title1">
+                                        </h4>
+                                        <p class="d-none d-md-block my-0 mb-3 text-color text"
+                                           ng-if="text1 != ''"
+                                           ng-bind-html="text1">
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col h-100 d-md-flex fadeInUp my-3 my-md-0 pl-md-3 pl-xl-4">
+                                    <div class="d-md-flex flex-column w-100 secondary-color">
+                                        <!--Picture-->
+                                        <div class="w-100 d-flex justify-content-center align-items-center mb-3 mb-md-0 overflow-hidden"
+                                           data-toggle="modal" data-target="#modal-img-2"
+                                           ng-if="illustration2 != ''">
+                                            <a class="bg-img rounded shadow justify-content-center align-items-center m-auto w-100"
+                                               href="#">
+                                                <img class="rounded" src="{{illustration2}}" alt="{{illustrationAlt2}}">
+                                                <h3 ng-if="title2 != ''" class="d-flex d-md-none text-center p-3 block-with-text z-index-1 title-color title"
+                                                ng-bind-html="title2"></h3>
+                                            </a>
+                                        </div>
+                                        <h4 class="d-none d-md-block mt-3 title-color title h3"
+                                            ng-if="title2 != ''"
+                                            ng-bind-html="title2">
+                                        </h4>
+                                        <p class="d-none d-md-block my-0 mb-3 text-color text"
+                                           ng-if="text2 != ''"
+                                           ng-bind-html="text2">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--EndOf Bloc Main-->
+                        <!--Modal 1-->
+                        <div class="modal fade p-0" id="modal-img-1" tabindex="-1" role="dialog" aria-labelledby="modal-img-1" aria-hidden="true">
+                            <div class="modal-dialog d-flex minh-100 align-items-center justify-content-center m-0 mw-100 secondary-color"
+                                 role="document">
+                                 <div class="col-12 col-sm-12 d-md-flex justify-content-center align-items-stretch flex-column">
+                                    <div class="d-md-flex content">
+                                        <img alt="{{illustrationAlt1}}" ng-src="{{illustration1}}" class="img-fluid maxheight m-auto py-3 w-auto">
+                                        <button type="button" class="d-flex btn btn-close bg-primary-color text-center" data-dismiss="modal" aria-label="Close">
+                                            <svg class="icon-tiny fill-on-primary-color align-self-center">
+                                                <use href="#icon-cross"></use>
+                                            </svg>
+                                        </button>
+                                        <h2 ng-if="title1 != ''" class="d-block d-md-none mt-2 w-100 title-color title mx-auto pointer-auto" ng-bind-html="title1"></h2>
+                                        <div ng-if="text1 != ''" class="d-block d-md-none mt-2 pb-3 text text-color pointer-auto" ng-bind-html="text1"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Modal 2-->
+                        <div class="modal fade p-0" id="modal-img-2"  tabindex="-1" role="dialog" aria-labelledby="modal-img-2" aria-hidden="true">
+                            <div class="modal-dialog d-flex minh-100 align-items-center justify-content-center m-0 mw-100 secondary-color"
+                                 role="document">
+                                 <div class="col-12 col-sm-12 d-md-flex justify-content-center align-items-stretch flex-column">
+                                    <div class="d-md-flex content">
+                                        <img alt="{{illustrationAlt2}}" ng-src="{{illustration2}}" class="img-fluid maxheight m-auto py-3 w-auto">
+                                        <button type="button" class="d-flex btn btn-close bg-primary-color text-center" data-dismiss="modal" aria-label="Close">
+                                            <svg class="icon-tiny fill-on-primary-color align-self-center">
+                                                <use href="#icon-cross"></use>
+                                            </svg>
+                                        </button>
+                                        <h2 ng-if="title2 != ''" class="d-block d-md-none mt-2 w-100 title-color title mx-auto pointer-auto" ng-bind-html="title2"></h2>
+                                        <div ng-if="text2 != ''" class="d-block d-md-none mt-2 pb-3 text text-color pointer-auto" ng-bind-html="text2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

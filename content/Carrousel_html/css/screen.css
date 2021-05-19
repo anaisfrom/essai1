@@ -1,0 +1,215 @@
+.owl-next::before, .owl-prev::before {
+    color: var(--on-secondary-color);
+}
+.owl-next:active::before, .owl-prev:active::before {
+    background-color: var(--secondary-color);
+    color: var(--on-secondary-color);
+}
+.owl-next:focus::before, .owl-prev:focus::before {
+    background-color: var(--secondary-color);
+    color: var(--on-secondary-color);
+}
+
+.owl-dots {
+  backface-visibility: hidden;
+  bottom: 10px;
+  width: auto;
+  display: inline-block;
+  text-align: center;
+}
+
+.owl-dots .owl-dot {
+  display: inline-block;
+  background-color: transparent !important;
+
+}
+
+.owl-dots .owl-dot span:after {
+  margin: 5px 7px;
+  border-radius: 100px;
+  display: block;
+  -webkit-backface-visibility: visible;
+}
+
+
+.owl-item.active  {
+  opacity: 1;
+  transition: opacity .2s ease;
+  display: block;
+}
+
+.owl-item {
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
+
+.owl-prev:hover, .owl-next:hover, .owl-prev:focus, .owl-next:focus {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    transition: all .15s ease;
+    -webkit-transition: all .15s ease;
+    -moz-transition: all .15s ease;
+    -o-transition: all .15s ease;
+    background-color: var(--secondary-color);
+}
+
+
+@media (max-width: 992px ) {
+  .maxheight {
+    margin-bottom: 0;
+    overflow: hidden;
+  }
+  .owl-prev span, .owl-next span {
+    display: none!important;
+    }
+}
+
+.owl-dots {
+  counter-reset: owl-dots;
+      margin: 0 7px;
+}
+
+.owl-dot {
+  counter-increment: owl-dots;
+  cursor: pointer;
+  position: relative;
+  margin: .2em;
+  min-width: 42px;
+  height: 42px;
+}
+
+.owl-dot:hover span::before {
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+
+}
+
+
+.owl-dot.active, .owl-dot:focus, .owl-dot:hover {
+  color: var(--secondary-color);
+}
+
+.owl-dot span:after {
+  content: counter(owl-dots)'';
+  vertical-align: middle;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 0.8em;
+  cursor: pointer;
+  color: var(--on-primary-color);
+}
+
+.owl-dot.active span:after, .owl-dot:hover span:after, .owl-dot:focus span:after {
+  color: var(--on-secondary-color);
+}
+
+.owl-dot span:before {
+  content: '';
+  vertical-align: middle;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--primary-color);
+  z-index: -1;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+  transition: box-shadow .25s ease;
+  -webkit-transition: box-shadow .25s ease;
+  -moz-transition: box-shadow .25s ease;
+  -o-transition: box-shadow .25s ease;
+}
+
+.owl-dot.active span:before, .owl-dot:hover span:before, .owl-dot:focus span:before {
+  content: '';
+  vertical-align: middle;
+  position: absolute;
+  background-color: var(--secondary-color);
+  color: var(--on-secondary-color);
+}
+
+.owl-prev, .owl-next {
+  background-color: var(--primary-color);
+  font-size: 1em;
+  padding: 8px 18px;
+  display: inherit;
+  cursor: pointer;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+  height: 42px;
+}
+
+
+.owl-prev svg, .owl-next svg {
+width: 17px;
+height: 15px;
+display: block;
+background-color: transparent!important;
+margin-top: 3px;
+}
+
+.owl-prev svg use, .owl-next svg use {
+fill: var(--on-primary-color);
+}
+
+.owl-prev span, .owl-next span {
+display: inline;
+font-weight: 600;
+color: var(--on-primary-color);
+}
+
+.owl-prev:active, .owl-next:active {
+transform:translateY(2px);
+  }
+  
+
+
+
+.owl-prev:hover svg use, .owl-next:hover svg use, .owl-prev:focus svg use, .owl-next:focus svg use {
+  fill: var(--on-secondary-color);
+  }
+  
+.owl-prev:hover span, .owl-next:hover span, .owl-prev:focus span, .owl-next:focus span  {
+  color: var(--on-secondary-color);
+  }
+
+  body:not(.rtl) .owl-prev svg:nth-child(1) {
+    display:none;
+  }
+
+  body:not(.rtl) .owl-next svg:last-child {
+    display:none;
+  }
+
+  body:not(.rtl) .owl-prev span {
+    margin-left:5px;
+  }
+
+  body:not(.rtl) .owl-next span {
+    margin-right:5px;
+  }
+
+.owl-item:not(.active) {
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
+@media all and (-ms-high-contrast:none)
+{
+.bg-img {
+  top: 0!important;
+}
+.owl-control {
+  margin-top: 7%;
+  position: relative!important;
+}
+.owl-stage {
+  margin-top: -5%;
+}
+}

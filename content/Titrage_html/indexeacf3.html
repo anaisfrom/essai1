@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.88, user-scalable=no, maximum-scale=0.88" />
+	<title>Titrage_html</title>
+	<link href="../../engine/css/screens.min.css" rel="stylesheet" type="text/css" />
+	<link href="../../engine/css/fonts.css" rel="stylesheet" type="text/css"/>
+	<link href="../../engine/css/customization.css" rel="stylesheet" type="text/css"/>
+	<link href="css/screen.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/polyfills/css-vars-ponyfill.min.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/jquery.min.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/angular.min.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="js/app-run.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="js/app-controler.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="localisation/localisation.js"></script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script type="text/javascript" charset="UTF-8">
+	//obfusquer
+	this.tracker = null;
+	this.params = {
+		//Texte du titre
+		title:"Congratulations!",
+		//Texte du sous titre
+		subtitle:"See you soon for another e-learning.",
+		//son associé à l'écran
+		sound: ""
+	};
+	var bridge = null;
+	function setTracker(pBridge){
+		bridge = pBridge;
+		//Initialisation du jeu lorsque la communication avec la meta à été établie
+		setTimeout(function(){
+			$("#container").scope().init();
+			$("#container").scope().$apply();
+		}, 10);
+	}
+	//finobfusquer
+	</script>
+</head>
+
+<body id="titrage"
+	  ng-app="cannelle_app">
+	<div id="container"
+		 role="main"
+		 ng-controller="cannelle_appCtrl">
+		<div class="container-fluid">
+			<div class="row delayed h-100 fh-100 minh-100 align-items-center justify-content-center">
+				<!--Bloc main-->
+				<div class="col-12 col-sm-12 col-sm-12 col-md-10 col-xl-8 d-md-flex justify-content-center align-items-center col-tablet">
+					<div class="d-md-flex maxh-100 minh-xl-100 w-0 p-0 m-0"></div>
+					<div class="row justify-content-center align-items-center">
+						<div class="m-auto px-3 py-3 py-md-3 py-lg-5 py-xl-5">
+							<div id="bandeau-titre" class="overflow-hidden secondary-color delayed">
+								<h3 class="display-1 fadeInUp font-weight-bold title-color"
+									ng-bind-html="title">
+								</h3>
+							</div>
+							<div class="overflow-hidden delayed">
+								<h4 class="mt-2 mt-lg-4 display-4 fadeInDown text"
+									ng-if="subtitle!=''"
+									ng-bind-html="subtitle">
+								</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--EndOf Bloc Main-->
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

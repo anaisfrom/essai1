@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.88, user-scalable=no, maximum-scale=0.88" />
+	<title>Definition_html</title>
+	<link href="../../engine/css/screens.min.css" rel="stylesheet" type="text/css" />
+	<link href="../../engine/css/fonts.css" rel="stylesheet" type="text/css"/>
+	<link href="../../engine/css/customization.css" rel="stylesheet" type="text/css"/>
+	<link href="css/screen.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/polyfills/css-vars-ponyfill.min.js"></script>
+    <script type="text/javascript" src="../../engine/js/polyfills/webp-polyfills.js"></script>
+    <script type="text/javascript" src="../../engine/js/polyfills/webp-hero.bundle.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/jquery.min.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/angular.min.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/modernizr-custom.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="js/app-run.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="js/app-controler.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="localisation/localisation.js"></script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script type="text/javascript" charset="UTF-8">
+	//obfusquer
+	this.tracker = null;
+	this.params = {
+		//Texte du titre
+		title: "How is managed the acoustic comfort with our parts?   (Insulation - Mass Law - 2)",
+		//Texte du sous titre
+		subtitle: "<span>What does it mean insulation?<br\/><br\/>2- Mass law<\/span>",
+		//Lien vers l'illustration
+		illustration: "Drums_vs_walls.jpg",
+		illustrationAlt: "illusAlt",
+		//Texte de la définition,
+		text: "<span>Considering a wall,<br\/>At same material density, thicker the wall is, better will be the noise insulation.<br\/>At same wall thickness, higher the density is, better will be the noise insulation.<br\/><br\/>It’s the raison why it’s more difficult to hear through a castle wall than through your office wall.<\/span>",
+		//Texte de la zone d'attention
+		warningText: "<span>Switch ON your sound device! - Let's hear what happens when someone plays drums behind a castle wall or an office wall (possible to replay this sound in the top right corner).<\/span>",
+		//son associé à l'écran
+		sound: "Insulation-batterie.mp3",
+		icone: "Ear-music.JPG",
+	};
+	var bridge = null;
+	function setTracker(pBridge){
+		bridge = pBridge;
+		//Initialisation du jeu lorsque la communication avec la meta à été établie
+		setTimeout(function(){
+			$("#container").scope().init();
+			$("#container").scope().$apply();
+		}, 10);
+	}
+	//finobfusquer
+	</script>
+</head>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <defs>
+        <symbol id="icon-cross" viewBox="0 0 20.3 20.3">
+            <path d="M11.6,10.2L20,1.7c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0l-8.4,8.4L1.7,0.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l8.4,8.4l-8.4,8.4
+                c-0.4,0.4-0.4,1,0,1.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l8.4-8.4l8.4,8.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3
+                c0.4-0.4,0.4-1,0-1.4L11.6,10.2z"/>
+        </symbol>
+    </defs>
+</svg>
+<body id="definition"
+	  ng-app="cannelle_app">
+	<div id="container"
+		 role="main"
+		 ng-controller="cannelle_appCtrl">
+		<div class="container-fluid">
+			<div class="row delayed h-100 fh-100 minh-100 align-items-center justify-content-center">
+				<!--Bloc main-->
+				<div class="col-12 d-md-flex justify-content-center flex-column align-items-stretch col-tablet"
+					 ng-class="{true:'col-sm-12 col-md-11 col-xl-10',false:'col-sm-12 col-md-10 col-xl-8'}[illustration != '']">
+					<div class="d-md-flex w-100 justify-content-center align-items-stretch delayed content">
+						<!--Illustration-->
+						<div class="col col-content sticky-md d-md-flex fadeInDown maxh-100 minh-100 pr-xl-4 pr-md-3 pl-md-0"
+							 ng-if="illustration != ''">
+							<div class="m-auto d-md-flex flex-column w-md-100 h-100 py-3">
+								<div class="m-auto d-flex justify-content-center align-items-center h-100"
+								   data-toggle="modal" data-target="#modal-img">
+									<a class="bg-img rounded shadow justify-content-center align-items-center m-auto"
+									   href="#">
+										<img class="rounded"
+											 src="{{illustration}}"
+											 alt="{{illustrationAlt}}">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="d-md-flex maxh-100 minh-xl-100 w-0 p-0 m-0">
+						</div>
+						<div class="col col-content d-md-flex"
+							 ng-class="{true:'pl-md-3 pl-xl-4',false:'mw-100'}[illustration != '']">
+							 <div class="m-auto d-md-flex w-100 py-3">
+								 <!--Bloc titrage-->
+								<div class="d-md-flex justify-content-center align-items-center"
+									 ng-if="subtitle!=''">
+									<div class="d-md-flex flex-column w-100">
+										<div id="bandeau-titre" class="d-flex w-100 bandeau">
+											<h2 class="fadeInDown blockquote my-3 px-3 py-1"
+												ng-bind-html="subtitle">
+											</h2>
+										</div>
+										<!--Texte-->
+										<div class="text-box mb-4 fadeInUp"
+											 ng-if="text != ''">
+											<p class="my-0 text"
+												 ng-bind-html="text">
+											</p>
+										</div>
+										<!--Mise en évidence-->
+										<div class="media warning-box p-4 bg-gray-light rounded fadeInUp mb-0 mb-md-3"
+											 ng-if="warningText.trim() != ''">
+											<img class="medium img-fluid mr-4 mt-1"
+												 src="{{icone}}"
+												 alt="icone" />
+											<div class="media-body align-self-center">
+												<p class="my-0 text-color"
+													 ng-bind-html="warningText">
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Modal 1-->
+				<div id="modal-img" class="modal modal-full fade justify-content-center p-0"
+					 tabindex="-1"
+					 role="dialog" aria-labelledby="modal-img" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered flex-column px-4 minh-auto mw-100 align-self-center"
+						 role="document">
+						<img class="img-fluid maxheight m-auto py-3 w-auto"
+							 alt="{{illustrationAlt}}"
+							 ng-src="{{illustration}}">
+							 <button type="button" class="d-flex btn btn-close bg-primary-color text-center" data-dismiss="modal" aria-label="Close">
+								<svg class="icon-tiny fill-on-primary-color align-self-center">
+									<use href="#icon-cross"></use>
+								</svg>
+							</button>
+					</div>
+				</div>
+
+				<!--EndOf Bloc Main-->
+			</div>
+		</div>
+	</div>
+</body>
+</html>

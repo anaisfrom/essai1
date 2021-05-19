@@ -1,0 +1,105 @@
+
+
+    /* ------------ OPTIONS GENERALES -------------
+
+    Vous pouvez modifier les couleurs générales de votre module Thaleia en changeant ces valeurs
+
+    */
+
+    :root {
+    --logo: url(../img/logo.jpg);
+    --logo-ie11: url(./engine/img/logo.jpg);
+    --primary-color: #fa0057; /* Définie la couleur du lecteur */
+    --on-primary-color: #fff;
+    --secondary-color:  #003684; /* Définie la couleur des écrans */
+    --on-secondary-color: #fff;
+    --image-display-mode: cover; /* Définie l'affichage des images ( couvert/contain ) */
+    --min-font: 16;
+    --max-font: 18;
+    }
+
+
+    /* ------- LETTRINES ---------
+    Decommenter pour ajouter une lettrine à l'ecran developpement ( Fonctionne sur tout les ecrans )
+
+    #developpement .text::first-letter {color:var(--secondary-color);}.text::first-letter{float:left;
+    font-size:3em;font-weight:600;line-height:.99;margin-right:10px;text-transform:uppercase;
+    text-shadow:0 3px #efefef;margin-left:-5px}.rtl .text::first-letter{float:none}
+    @-moz-document url-prefix(){.text::first-letter{margin-top:.22em;margin-right:-.22em}}
+    .text::first-line{line-height:1.48}.text{line-height:1.55}
+    */
+
+    /*----------- OPTIONS AVANCEES -------------
+
+    Vous pouvez cibler vos paramètres definie plus haut sur l'ecran ou l'élément de votre choix.
+
+    /* META */
+    #navbar {
+		--primary-color: #fff; /* Définie la couleur du lecteur */
+		--on-primary-color: #003684;
+	}		/* barre du haut */
+    #action-buttons,  /* boutons du bas */
+    #sidebar, /* barre latéral de droite */
+    #consigne, /* consigne d'exercice */
+    #legende, /* legende d'exercice */
+    #pop,/* introduction à l'activité */
+    #supervised-navigation,
+    #forced-navigation,
+    #content_displayer, /* Contenu */
+    #feedbackModal /* feedback d'exercice */
+    {
+        /*
+        --primary-color: #333;
+        --on-primary-color: #fff;
+        (...)
+        */
+    }
+
+    /* MODELES */
+    .blockquote,
+    .text
+    {
+        /*
+        --primary-color: #333;
+        --on-primary-color: #fff;
+        (...)
+        */
+    }
+
+    /* ECRANS D'APPORTS*/
+    #titrage,
+    #objectifs,
+    #schema,
+    #developpement,
+    #definition,
+    #enumeration,
+    #video,
+    #carrousel,
+    #comparaison
+    {
+        /*
+        --primary-color: #333;
+        --on-primary-color: #fff;
+        (...)
+        */
+    }
+
+    /* ECRANS D'ACTIVITES*/
+    #classification,
+    #completionLibre,
+    #association,
+    #choice,
+    #flip,
+    #random,
+    #processLigne,
+    #derouler,
+    #takeaway,
+    #cercle,
+    #bilan
+    {
+        /*
+        --primary-color: #333;
+        --on-primary-color: #fff;
+        (...)
+        */
+    }

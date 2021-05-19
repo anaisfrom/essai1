@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.88, user-scalable=no, maximum-scale=0.88"/>
+    <title>Choice_html</title>
+    <link href="../../engine/css/screens.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../../engine/css/fonts.css" rel="stylesheet" type="text/css"/>
+    <link href="../../engine/css/customization.css" rel="stylesheet" type="text/css"/>
+    <link href="css/screen.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" charset="UTF-8" src="../../engine/js/polyfills/css-vars-ponyfill.min.js"></script>
+    <script type="text/javascript" src="../../engine/js/polyfills/webp-polyfills.js"></script>
+    <script type="text/javascript" src="../../engine/js/polyfills/webp-hero.bundle.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="../../engine/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../engine/js/polyfills/angular-polyfill.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="../../engine/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="../../engine/js/angular.min.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="../../engine/js/modernizr-custom.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/app-run.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/app-controler.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="localisation/localisation.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript" charset="UTF-8">
+    //obfusquer
+    this.tracker = null;
+    this.rep_a = true;
+    this.rep_b = true;
+    this.rep_c = false;
+    this.rep_d = false;
+    this.rep_e = false;
+    this.rep_f = false;
+    this.rep_g = false;
+    this.rep_h = false;
+    this.rep_i = false;
+    this.rep_j = false;
+    this.params = {
+        //Identifiant de l'interaction scorm
+        id: "Activity2-Question2",
+        //Titre de l'exercice
+        exo_title: "QUIZ: Question 2",
+        //Enoncé de l'exercice
+        statement: "What is the acoustic principle done by this material?  (1 or several answers)<br\/><br\/>The felt (alone or associated to something else):",
+        //Consigne de l'exercice
+        consigne: "Select the correct answers (several possible), then click on the validate button.",
+        timerPourEcran: "-1",
+        //Illustration de la question
+        illustration: "Felt.jpg",
+        illustrationAlt: "illusAlt",
+        //label de reussite
+        lbl_reussite: "Correct",
+        //label d'echec
+        lbl_echec: "Incorrect",
+        //Textes de feedback tentatives
+        //Lorsque réussie
+        feedbackAttemptRight: "It can make sound absorption (if not covered on their two faces) and\/or be used as spring in a Mass-Spring system.",
+        //Lorsqu'échouée
+        feedbackAttemptWrong: "No, it can make sound absorption (if not covered on their two faces) and\/or be used as spring in a Mass-Spring system.",
+        //Feedback (valeurs possibles : rien, un texte ou une image)
+        feedbackFinal: {
+            feedbackText: "",
+            feedbackImage: "",
+            feedbackImageAlt: "illusAltFeedback"
+        },
+        scoring: "1", //global / item
+        scoringAmount: 1, //Score donné à l'exercice si global ou bien donné par item
+        nbtries: 1, //Nombre d'essais possibles
+        //Type de correction
+        //0 : Pas de correction
+        //1 : On montre ce qui est faux
+        //2 : On montre ce qu'il fallait faire
+        //3 : On montre ce qui est faux et ce qu'il fallait faire
+        correction: 3,
+        //Liste des items
+        items: {
+            "item_a": {value: "Absorbing", correct: this.rep_a, selected: false},
+            "item_b": {value: "Insulating", correct: this.rep_b, selected: false},
+            "item_c": {value: "ANC", correct: this.rep_c, selected: false},
+            "item_d": {value: "", correct: this.rep_d, selected: false},
+            "item_e": {value: "", correct: this.rep_e, selected: false},
+            "item_f": {value: "", correct: this.rep_f, selected: false},
+            "item_g": {value: "", correct: this.rep_g, selected: false},
+            "item_h": {value: "", correct: this.rep_h, selected: false},
+            "item_i": {value: "", correct: this.rep_i, selected: false},
+            "item_j": {value: "", correct: this.rep_j, selected: false},
+        },
+        messageFinBad:"Vous ne remportez pas de points",
+        messageFinGood:"Vous remportez",
+        //son associé à l'écran
+        sound: "",
+        //Mélange les propositions
+        shuffle: true
+    };
+    function setScoringAmount(){
+        if (params.scoring == "0"){
+            params.scoringAmount = 0;
+            params.scoring = "aucun"
+        }
+        else if (params.scoring == "1"){
+            params.scoringAmount = 1;
+            params.scoring = "Par question répondu"
+        }
+        else if (params.scoring == "2"){
+            params.scoringAmount = 1;
+            params.scoring = "Par choix"
+        }
+    }
+    setScoringAmount();
+    var bridge = null;
+    function setTracker(pBridge) {
+        bridge = pBridge;
+        //Initialisation du jeu lorsque la communication avec la meta à été établie
+        setTimeout(function(){
+            bridge.lockMeta();
+            $("#container").scope().init();
+            $("#container").scope().$apply();
+        }, 10);
+    }
+    //finobfusquer
+    </script>
+</head>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <defs>
+        <symbol id="icon-cross" viewBox="0 0 20.3 20.3">
+            <path d="M11.6,10.2L20,1.7c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0l-8.4,8.4L1.7,0.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l8.4,8.4l-8.4,8.4
+                c-0.4,0.4-0.4,1,0,1.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l8.4-8.4l8.4,8.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3
+                c0.4-0.4,0.4-1,0-1.4L11.6,10.2z"/>
+        </symbol>
+    </defs>
+</svg>
+<body id="choice"
+      ng-app="cannelle_app">
+<div id="container"
+     role="main"
+     ng-controller="cannelle_appCtrl">
+
+    <style>
+        .maxheight {
+            max-height:{{getMaxHeight()}};
+        }
+        .minheight {
+            min-height:{{getMinHeight()}};
+        }
+    </style>
+
+    <script>
+        // L'écran étant long à s'initialiser il faut cacher le bouton "suivant" pour éviter tout clic malencontreux d'un utilisateur.
+        $('#btn-next', window.parent.document).addClass("hidden-btn");
+        $('#btn-previous', window.parent.document).addClass("hidden-btn");
+    </script>
+
+    <div class="container-fluid">
+        <div class="row delayed h-100 fh-100 minh-100 align-items-center justify-content-center">
+
+            <!--loader-->
+            <div class="loader-container show stroke-secondary-color">
+                <svg class="filler-loader"
+                     viewBox="0 0 100 100">
+                    <circle class="fill-path stroke-title-color"
+                            cx="50" cy="50" r="40"/>
+                </svg>
+            </div>
+
+            <!--Activity-->
+            <div class="col-12 col-sm-12 d-md-flex justify-content-center align-items-stretch flex-column col-tablet"
+                 ng-class="{true:'col-md-11 col-xl-10',false:'col-md-10 col-xl-8'}[illustration != '']">
+                <div class="d-md-flex w-100 justify-content-center align-items-stretch delayed content">
+                    <div class="col col-content d-md-flex order-md-first fadeInDown maxh-100 minh-100 sticky-md pr-xl-4 pr-md-3 px-0"
+                         ng-if="illustration != ''">
+                        <div class="m-auto d-md-flex flex-column w-md-100 h-100 py-3">
+                            <!--Picture-->
+                            <div class="m-auto d-flex justify-content-center align-items-center h-100"
+                               data-toggle="modal" data-target="#modal-img">
+                                <a class="bg-img rounded shadow justify-content-center align-items-center m-auto"
+                                   href="#">
+                                    <img class="rounded"
+                                         src="{{illustration}}"
+                                         alt="{{illustrationAlt}}">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-md-flex maxh-100 minh-xl-100 w-0 p-0 m-0"></div>
+                    <div class="col col-content d-md-flex flex-column"
+                         ng-class="{true:'pl-xl-4 pl-md-3 pr-md-0',false:'mw-100'}[illustration != '']">
+                        <div class="m-auto d-md-flex flex-column w-100 py-3">
+                            <!--Bandeau Titre-->
+                            <div class="d-md-flex w-100 justify-content-center align-items-center"
+                                 ng-if="getExoTitle()!=''">
+                                <div id="bandeau-titre" class="d-flex w-100 bandeau">
+                                    <h2 class="fadeInDown blockquote my-3 px-3 py-1"
+                                        ng-bind-html="getExoTitle()">
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="d-md-flex flex-column w-100 delayed">
+                                <!--Exercice-->
+                                <ul class="nav nav-pills nav-stacked question delayed pb-3"
+                                    ng-if="!showCorrection"
+                                    ng-class="{true:'current',false:'finish'}[gameStarted != '']">
+                                    <div class="w-100 fadeInUp shadow-sm bg-white"
+                                         ng-repeat="(key,item) in items"
+                                         ng-enter>
+                                         <label>
+                                               <input type="checkbox" id="{{key}}"
+                                                      class="radio-custom bg-secondary-color" value="option_{{key}}"
+                                                      aria-labelledby="{{key}}"
+                                                      ng-model="item.selected"
+                                                      ng-disabled="!gameStarted">
+                                             <div class="radio-custom-label">
+                                                 <p class="my-0">
+                                                     <span ng-bind-html="item.value"></span>
+                                                     <span id="{{key}}-aria-correction" class="sr-only"></span>
+                                                 </p>
+                                             </div>
+                                         </label>
+                                    </div>
+                                </ul>
+                                <!--Correction-->
+                                <ul class="nav nav-pills nav-stacked reponse delayed pb-3"
+                                    ng-class="{true:'current',false:'finish'}[gameStarted != '']"
+                                    ng-if="showCorrection == true">
+                                    <div class="w-100 fadeInUp shadow-sm bg-white"
+                                         ng-repeat="(key,item) in items">
+                                         <label>
+                                        <input id="{{key}}" class="radio-custom bg-secondary-color"
+                                               name="{{key}}" type="checkbox"
+                                               aria-label="{{getAriaLabelForItemCorrection(item.correct)}}"
+                                               ng-disabled="!gameStarted"
+                                               ng-checked="item.correct">
+
+                                            <div class="radio-custom-label">
+                                                <p class="my-0"
+                                                   ng-bind-html="item.value">
+                                                </p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Modale illustration-->
+            <div id="modal-img" class="modal modal-full fade justify-content-center p-0"
+                 tabindex="-1"
+                 role="dialog" aria-labelledby="modal-img" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered flex-column px-4 minh-auto mw-100 align-self-center"
+                     role="document">
+                    <img class="img-fluid maxheight m-auto py-3 w-auto"
+                         alt="{{illustrationAlt}}"
+                         ng-src="{{illustration}}">
+                        <button type="button" class="d-flex btn btn-close bg-primary-color text-center" data-dismiss="modal" aria-label="Close">
+                        <svg class="icon-tiny fill-on-primary-color align-self-center">
+                            <use href="#icon-cross"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

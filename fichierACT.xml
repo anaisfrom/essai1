@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<act>
+  <glossary />
+  <resources />
+  <properties>
+    <data>
+      <property>background_color</property>
+      <value>0x000000</value>
+    </data>
+    <data>
+      <property>_H1</property>
+      <value>Acoustics introduction e-learning</value>
+    </data>
+    <data>
+      <property>Logiciel auteur</property>
+      <value>Solunea Thaleia v4</value>
+    </data>
+  </properties>
+  <navigation>
+    <flow>true</flow>
+    <mainContent contentid="50" />
+    <storeProgression>true</storeProgression>
+    <scoreOnce>true</scoreOnce>
+    <back>history</back>
+  </navigation>
+  <contents>
+    <content id="1" menuId="1" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[Congratulations!]]></title>
+      <subtitle><![CDATA[Congratulations!]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Titrage_html/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="2" menuId="2" duration="1" difficulty="" theme="" type="bilan" mandatory="false" randomPool="false">
+      <title><![CDATA[Your Scoring]]></title>
+      <subtitle><![CDATA[Your Scoring]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/BilanThematique_html/indexeacf3.html]]></filename>
+      </rlc>
+      <doors>
+        <door id="startout">
+          <gotoDoor contentId="1" doorId="startin" />
+        </door>
+      </doors>
+    </content>
+    <content id="3" menuId="3" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[How to learn more about acoustics?]]></title>
+      <subtitle><![CDATA[How to learn more about acoustics?]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/TakeAway_html/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="4" menuId="4" duration="1" difficulty="" theme="" type="" mandatory="true" randomPool="false">
+      <title><![CDATA[And for You?]]></title>
+      <subtitle><![CDATA[And for You?]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Choice_html/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="5" menuId="5" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[How I can contribute to the acoustic performance of our parts?]]></title>
+      <subtitle><![CDATA[How I can contribute to the acoustic performance of our parts?]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Carrousel_html/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="6" menuId="6" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[Conclusion]]></title>
+      <subtitle><![CDATA[Conclusion]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Schema_html/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="7" menuId="7" duration="1" difficulty="" theme="" type="quiz" mandatory="true" randomPool="false">
+      <title><![CDATA[Central area:]]></title>
+      <subtitle><![CDATA[Central area:]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/CompletionLibre_html/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="8" menuId="8" duration="1" difficulty="" theme="" type="quiz" mandatory="true" randomPool="false">
+      <title><![CDATA[Rear area:]]></title>
+      <subtitle><![CDATA[Rear area:]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/CompletionLibre_html6ce5ba0c/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="9" menuId="9" duration="1" difficulty="" theme="" type="quiz" mandatory="true" randomPool="false">
+      <title><![CDATA[Front area:]]></title>
+      <subtitle><![CDATA[Front area:]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/CompletionLibre_html1b893cb5/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="10" menuId="10" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[What is our sound package?  (2)]]></title>
+      <subtitle><![CDATA[What is our sound package?  (2)]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Enumeration_html/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="11" menuId="11" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[What is our sound package?  (1)]]></title>
+      <subtitle><![CDATA[What is our sound package?  (1)]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Schema_html40971889/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="12" menuId="12" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[Where to treat the noise?]]></title>
+      <subtitle><![CDATA[Where to treat the noise?]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Video_html/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="13" menuId="13" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[How is managed the acoustic comfort with our parts?  (Insulation)]]></title>
+      <subtitle><![CDATA[How is managed the acoustic comfort with our parts?  (Insulation)]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Definition_html/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="14" menuId="14" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[How is managed the acoustic comfort with our parts?  (Absorption)]]></title>
+      <subtitle><![CDATA[How is managed the acoustic comfort with our parts?  (Absorption)]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Definition_htmle52cdc9b/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="15" menuId="15" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[Where does the noise come from in the car?]]></title>
+      <subtitle><![CDATA[Where does the noise come from in the car?]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Video_html0323f2e7/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="16" menuId="16" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[How is managed the acoustic package strategy with our parts?]]></title>
+      <subtitle><![CDATA[How is managed the acoustic package strategy with our parts?]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Developpement_html/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="17" menuId="17" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[Feel the complementary between Passive Treatments and ANC:]]></title>
+      <subtitle><![CDATA[Feel the complementary between Passive Treatments and ANC:]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Video_html8745753a/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="18" menuId="18" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[How is managed the acoustic comfort with our parts?   (Conclusion - 2)]]></title>
+      <subtitle><![CDATA[How is managed the acoustic comfort with our parts?   (Conclusion - 2)]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Definition_html44e9cc3b/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="19" menuId="19" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[How is managed the acoustic comfort with our parts?   (Conclusion - 1)]]></title>
+      <subtitle><![CDATA[How is managed the acoustic comfort with our parts?   (Conclusion - 1)]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Comparaison_html/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="20" menuId="20" duration="1" difficulty="" theme="" type="quiz" mandatory="true" randomPool="false">
+      <title><![CDATA[QUIZ: Question 6]]></title>
+      <subtitle><![CDATA[QUIZ: Question 6]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Choice_htmlb3596282/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="21" menuId="21" duration="1" difficulty="" theme="" type="quiz" mandatory="true" randomPool="false">
+      <title><![CDATA[QUIZ: Question 5]]></title>
+      <subtitle><![CDATA[QUIZ: Question 5]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Choice_html5add940d/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="22" menuId="22" duration="1" difficulty="" theme="" type="quiz" mandatory="true" randomPool="false">
+      <title><![CDATA[QUIZ: Question 4]]></title>
+      <subtitle><![CDATA[QUIZ: Question 4]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Choice_html2d43e7e9/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="23" menuId="23" duration="1" difficulty="" theme="" type="quiz" mandatory="true" randomPool="false">
+      <title><![CDATA[QUIZ: Question 3]]></title>
+      <subtitle><![CDATA[QUIZ: Question 3]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Choice_htmle7584c80/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="24" menuId="24" duration="1" difficulty="" theme="" type="quiz" mandatory="true" randomPool="false">
+      <title><![CDATA[QUIZ: Question 2]]></title>
+      <subtitle><![CDATA[QUIZ: Question 2]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Choice_html97f6ebdf/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="25" menuId="25" duration="1" difficulty="" theme="" type="quiz" mandatory="true" randomPool="false">
+      <title><![CDATA[QUIZ: Question 1]]></title>
+      <subtitle><![CDATA[QUIZ: Question 1]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Choice_html2be93158/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="26" menuId="26" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[How is managed the acoustic comfort with our parts?   (Insulation - Mass Spring system - 3)]]></title>
+      <subtitle><![CDATA[How is managed the acoustic comfort with our parts?   (Insulation - Mass Spring system - 3)]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Definition_htmlcf7af662/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="27" menuId="27" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[How is managed the acoustic comfort with our parts?   (Insulation - Mass Spring system - 2)]]></title>
+      <subtitle><![CDATA[How is managed the acoustic comfort with our parts?   (Insulation - Mass Spring system - 2)]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Definition_html32dc7c15/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="28" menuId="28" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[How is managed the acoustic comfort with our parts?   (Insulation - Mass Spring system - 1)]]></title>
+      <subtitle><![CDATA[How is managed the acoustic comfort with our parts?   (Insulation - Mass Spring system - 1)]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Comparaison_htmlb00fc302/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="29" menuId="29" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[How is managed the acoustic comfort with our parts?   (Insulation - Mass Law - 3)]]></title>
+      <subtitle><![CDATA[How is managed the acoustic comfort with our parts?   (Insulation - Mass Law - 3)]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Definition_html6c947c7f/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="30" menuId="30" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[How is managed the acoustic comfort with our parts?   (Insulation - Mass Law - 2)]]></title>
+      <subtitle><![CDATA[How is managed the acoustic comfort with our parts?   (Insulation - Mass Law - 2)]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Definition_html58cf34b2/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="31" menuId="31" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[How is managed the acoustic comfort with our parts?   (Insulation - Mass Law - 1)]]></title>
+      <subtitle><![CDATA[How is managed the acoustic comfort with our parts?   (Insulation - Mass Law - 1)]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Definition_htmla5129ee9/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="32" menuId="32" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[How is managed the acoustic comfort with our parts?   (Insulation - Airtightness - 2)]]></title>
+      <subtitle><![CDATA[How is managed the acoustic comfort with our parts?   (Insulation - Airtightness - 2)]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Definition_html64592341/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="33" menuId="33" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[How is managed the acoustic comfort with our parts?   (Insulation - Airtightness - 1)]]></title>
+      <subtitle><![CDATA[How is managed the acoustic comfort with our parts?   (Insulation - Airtightness - 1)]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Definition_html60863082/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="34" menuId="34" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[How is managed the acoustic comfort with our parts?  (Insulation)]]></title>
+      <subtitle><![CDATA[How is managed the acoustic comfort with our parts?  (Insulation)]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Enumeration_htmlea99e5c7/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="35" menuId="35" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[How is managed the acoustic comfort with our parts?   (Absorption - 3)]]></title>
+      <subtitle><![CDATA[How is managed the acoustic comfort with our parts?   (Absorption - 3)]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Definition_html0a2f7471/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="36" menuId="36" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[How is managed the acoustic comfort with our parts?  (Absorption - 2)]]></title>
+      <subtitle><![CDATA[How is managed the acoustic comfort with our parts?  (Absorption - 2)]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Definition_htmlcb1e4ff0/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="37" menuId="37" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[How is managed the acoustic comfort with our parts?  (Absorption - 1)]]></title>
+      <subtitle><![CDATA[How is managed the acoustic comfort with our parts?  (Absorption - 1)]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Definition_html84f07836/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="38" menuId="38" duration="1" difficulty="" theme="" type="quiz" mandatory="true" randomPool="false">
+      <title><![CDATA[What is done in the movie to reduce the sound of the guitar? - Question 3]]></title>
+      <subtitle><![CDATA[What is done in the movie to reduce the sound of the guitar? - Question 3]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Choice_html37ff5aa3/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="39" menuId="39" duration="1" difficulty="" theme="" type="quiz" mandatory="true" randomPool="false">
+      <title><![CDATA[What is done in the movie to reduce the sound of the guitar? - Question 2]]></title>
+      <subtitle><![CDATA[What is done in the movie to reduce the sound of the guitar? - Question 2]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Choice_html145771e5/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="40" menuId="40" duration="1" difficulty="" theme="" type="quiz" mandatory="true" randomPool="false">
+      <title><![CDATA[What is done in the movie to reduce the sound of the guitar? - Question 1]]></title>
+      <subtitle><![CDATA[What is done in the movie to reduce the sound of the guitar? - Question 1]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Choice_html1d2f3b0e/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="41" menuId="41" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[How is managed the acoustic comfort with our parts?]]></title>
+      <subtitle><![CDATA[How is managed the acoustic comfort with our parts?]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Video_htmlee6cd204/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="42" menuId="42" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[How is managed the acoustic comfort?  (4)]]></title>
+      <subtitle><![CDATA[How is managed the acoustic comfort?  (4)]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Definition_htmle1b8d981/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="43" menuId="43" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[How is managed the acoustic comfort?  (3)]]></title>
+      <subtitle><![CDATA[How is managed the acoustic comfort?  (3)]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Definition_htmlef0e9273/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="44" menuId="44" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[How is managed the acoustic comfort?  (2)]]></title>
+      <subtitle><![CDATA[How is managed the acoustic comfort?  (2)]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Definition_html634a3c4c/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="45" menuId="45" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[How is managed the acoustic comfort?  (1)]]></title>
+      <subtitle><![CDATA[How is managed the acoustic comfort?  (1)]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Definition_html7458e369/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="46" menuId="46" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[Introduction  (2)]]></title>
+      <subtitle><![CDATA[Introduction  (2)]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Schema_htmld9b27a8c/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="47" menuId="47" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[Introduction  (1)]]></title>
+      <subtitle><![CDATA[Introduction  (1)]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Schema_html3ed764b4/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="48" menuId="48" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[Training objectives]]></title>
+      <subtitle><![CDATA[Training objectives]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Objectifs_html/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="49" menuId="49" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[Set Up]]></title>
+      <subtitle><![CDATA[Set Up]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Definition_html4660fb62/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+    <content id="50" menuId="50" duration="1" difficulty="" theme="" type="" mandatory="false" randomPool="false">
+      <title><![CDATA[Introduction to the Acoustics]]></title>
+      <subtitle><![CDATA[Introduction to the Acoustics]]></subtitle>
+      <rlc>
+        <filename><![CDATA[content/Titrage_html73469648/indexeacf3.html]]></filename>
+      </rlc>
+    </content>
+  </contents>
+  <contentsTree masteryScore="75">
+    <node contentid="50" scoreRollup="0" progressRollup="true" />
+    <node contentid="49" scoreRollup="0" progressRollup="true" />
+    <node contentid="48" scoreRollup="0" progressRollup="true" />
+    <node contentid="47" scoreRollup="0" progressRollup="true" />
+    <node contentid="46" scoreRollup="0" progressRollup="true" />
+    <node contentid="45" scoreRollup="0" progressRollup="true" />
+    <node contentid="44" scoreRollup="0" progressRollup="true" />
+    <node contentid="43" scoreRollup="0" progressRollup="true" />
+    <node contentid="42" scoreRollup="0" progressRollup="true" />
+    <node contentid="41" scoreRollup="0" progressRollup="true" />
+    <node contentid="40" scoreRollup="100" progressRollup="true" />
+    <node contentid="39" scoreRollup="100" progressRollup="true" />
+    <node contentid="38" scoreRollup="100" progressRollup="true" />
+    <node contentid="37" scoreRollup="0" progressRollup="true" />
+    <node contentid="36" scoreRollup="0" progressRollup="true" />
+    <node contentid="35" scoreRollup="0" progressRollup="true" />
+    <node contentid="34" scoreRollup="0" progressRollup="true" />
+    <node contentid="33" scoreRollup="0" progressRollup="true" />
+    <node contentid="32" scoreRollup="0" progressRollup="true" />
+    <node contentid="31" scoreRollup="0" progressRollup="true" />
+    <node contentid="30" scoreRollup="0" progressRollup="true" />
+    <node contentid="29" scoreRollup="0" progressRollup="true" />
+    <node contentid="28" scoreRollup="0" progressRollup="true" />
+    <node contentid="27" scoreRollup="0" progressRollup="true" />
+    <node contentid="26" scoreRollup="0" progressRollup="true" />
+    <node contentid="25" scoreRollup="100" progressRollup="true" />
+    <node contentid="24" scoreRollup="100" progressRollup="true" />
+    <node contentid="23" scoreRollup="100" progressRollup="true" />
+    <node contentid="22" scoreRollup="100" progressRollup="true" />
+    <node contentid="21" scoreRollup="100" progressRollup="true" />
+    <node contentid="20" scoreRollup="100" progressRollup="true" />
+    <node contentid="19" scoreRollup="0" progressRollup="true" />
+    <node contentid="18" scoreRollup="0" progressRollup="true" />
+    <node contentid="17" scoreRollup="0" progressRollup="true" />
+    <node contentid="16" scoreRollup="0" progressRollup="true" />
+    <node contentid="15" scoreRollup="0" progressRollup="true" />
+    <node contentid="14" scoreRollup="0" progressRollup="true" />
+    <node contentid="13" scoreRollup="0" progressRollup="true" />
+    <node contentid="12" scoreRollup="0" progressRollup="true" />
+    <node contentid="11" scoreRollup="0" progressRollup="true" />
+    <node contentid="10" scoreRollup="0" progressRollup="true" />
+    <node contentid="9" scoreRollup="0" progressRollup="true" />
+    <node contentid="8" scoreRollup="100" progressRollup="true" />
+    <node contentid="7" scoreRollup="100" progressRollup="true" />
+    <node contentid="6" scoreRollup="0" progressRollup="true" />
+    <node contentid="5" scoreRollup="0" progressRollup="true" />
+    <node contentid="4" scoreRollup="0" progressRollup="true" />
+    <node contentid="3" scoreRollup="0" progressRollup="true" />
+    <node contentid="2" scoreRollup="0" progressRollup="true" />
+    <node contentid="1" scoreRollup="0" progressRollup="true" />
+  </contentsTree>
+  <menus>
+    <menu xml:lang="fr" access="previousInTree">
+      <item contentId="50" id="50" clickable="true">
+        <text><![CDATA[Introduction to the Acoustics]]></text>
+      </item>
+      <item contentId="49" id="49" clickable="true">
+        <text><![CDATA[Set Up]]></text>
+      </item>
+      <item contentId="48" id="48" clickable="true">
+        <text><![CDATA[Training objectives]]></text>
+      </item>
+      <item contentId="47" id="47" clickable="true">
+        <text><![CDATA[Introduction  (1)]]></text>
+      </item>
+      <item contentId="46" id="46" clickable="true">
+        <text><![CDATA[Introduction  (2)]]></text>
+      </item>
+      <item contentId="45" id="45" clickable="true">
+        <text><![CDATA[How is managed the acoustic comfort?  (1)]]></text>
+      </item>
+      <item contentId="44" id="44" clickable="true">
+        <text><![CDATA[How is managed the acoustic comfort?  (2)]]></text>
+      </item>
+      <item contentId="43" id="43" clickable="true">
+        <text><![CDATA[How is managed the acoustic comfort?  (3)]]></text>
+      </item>
+      <item contentId="42" id="42" clickable="true">
+        <text><![CDATA[How is managed the acoustic comfort?  (4)]]></text>
+      </item>
+      <item contentId="41" id="41" clickable="true">
+        <text><![CDATA[How is managed the acoustic comfort with our parts?]]></text>
+      </item>
+      <item contentId="37" id="37" clickable="true">
+        <text><![CDATA[How is managed the acoustic comfort with our parts?  (Absorption - 1)]]></text>
+      </item>
+      <item contentId="36" id="36" clickable="true">
+        <text><![CDATA[How is managed the acoustic comfort with our parts?  (Absorption - 2)]]></text>
+      </item>
+      <item contentId="35" id="35" clickable="true">
+        <text><![CDATA[How is managed the acoustic comfort with our parts?   (Absorption - 3)]]></text>
+      </item>
+      <item contentId="34" id="34" clickable="true">
+        <text><![CDATA[How is managed the acoustic comfort with our parts?  (Insulation)]]></text>
+      </item>
+      <item contentId="33" id="33" clickable="true">
+        <text><![CDATA[How is managed the acoustic comfort with our parts?   (Insulation - Airtightness - 1)]]></text>
+      </item>
+      <item contentId="32" id="32" clickable="true">
+        <text><![CDATA[How is managed the acoustic comfort with our parts?   (Insulation - Airtightness - 2)]]></text>
+      </item>
+      <item contentId="31" id="31" clickable="true">
+        <text><![CDATA[How is managed the acoustic comfort with our parts?   (Insulation - Mass Law - 1)]]></text>
+      </item>
+      <item contentId="30" id="30" clickable="true">
+        <text><![CDATA[How is managed the acoustic comfort with our parts?   (Insulation - Mass Law - 2)]]></text>
+      </item>
+      <item contentId="29" id="29" clickable="true">
+        <text><![CDATA[How is managed the acoustic comfort with our parts?   (Insulation - Mass Law - 3)]]></text>
+      </item>
+      <item contentId="28" id="28" clickable="true">
+        <text><![CDATA[How is managed the acoustic comfort with our parts?   (Insulation - Mass Spring system - 1)]]></text>
+      </item>
+      <item contentId="27" id="27" clickable="true">
+        <text><![CDATA[How is managed the acoustic comfort with our parts?   (Insulation - Mass Spring system - 2)]]></text>
+      </item>
+      <item contentId="26" id="26" clickable="true">
+        <text><![CDATA[How is managed the acoustic comfort with our parts?   (Insulation - Mass Spring system - 3)]]></text>
+      </item>
+      <item contentId="19" id="19" clickable="true">
+        <text><![CDATA[How is managed the acoustic comfort with our parts?   (Conclusion - 1)]]></text>
+      </item>
+      <item contentId="18" id="18" clickable="true">
+        <text><![CDATA[How is managed the acoustic comfort with our parts?   (Conclusion - 2)]]></text>
+      </item>
+      <item contentId="17" id="17" clickable="true">
+        <text><![CDATA[Feel the complementary between Passive Treatments and ANC:]]></text>
+      </item>
+      <item contentId="16" id="16" clickable="true">
+        <text><![CDATA[How is managed the acoustic package strategy with our parts?]]></text>
+      </item>
+      <item contentId="15" id="15" clickable="true">
+        <text><![CDATA[Where does the noise come from in the car?]]></text>
+      </item>
+      <item contentId="14" id="14" clickable="true">
+        <text><![CDATA[How is managed the acoustic comfort with our parts?  (Absorption)]]></text>
+      </item>
+      <item contentId="13" id="13" clickable="true">
+        <text><![CDATA[How is managed the acoustic comfort with our parts?  (Insulation)]]></text>
+      </item>
+      <item contentId="12" id="12" clickable="true">
+        <text><![CDATA[Where to treat the noise?]]></text>
+      </item>
+      <item contentId="11" id="11" clickable="true">
+        <text><![CDATA[What is our sound package?  (1)]]></text>
+      </item>
+      <item contentId="10" id="10" clickable="true">
+        <text><![CDATA[What is our sound package?  (2)]]></text>
+      </item>
+      <item contentId="9" id="9" clickable="true">
+        <text><![CDATA[Front area:]]></text>
+      </item>
+      <item contentId="6" id="6" clickable="true">
+        <text><![CDATA[Conclusion]]></text>
+      </item>
+      <item contentId="5" id="5" clickable="true">
+        <text><![CDATA[How I can contribute to the acoustic performance of our parts?]]></text>
+      </item>
+      <item contentId="4" id="4" clickable="true">
+        <text><![CDATA[And for You?]]></text>
+      </item>
+      <item contentId="3" id="3" clickable="true">
+        <text><![CDATA[How to learn more about acoustics?]]></text>
+      </item>
+      <item contentId="1" id="1" clickable="true">
+        <text><![CDATA[Congratulations!]]></text>
+      </item>
+    </menu>
+  </menus>
+</act>

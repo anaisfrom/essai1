@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.88, user-scalable=no, maximum-scale=0.88"/>
+    <title>Carrousel_html</title>
+    <link href="../../engine/css/screens.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../../engine/css/fonts.css" rel="stylesheet" type="text/css"/>
+    <link href="../../engine/css/customization.css" rel="stylesheet" type="text/css"/>
+    <link href="css/screen.css" rel="stylesheet" type="text/css"/>
+    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" charset="UTF-8" src="../../engine/js/polyfills/css-vars-ponyfill.min.js"></script>
+    <script type="text/javascript" src="../../engine/js/polyfills/webp-polyfills.js"></script>
+    <script type="text/javascript" src="../../engine/js/polyfills/webp-hero.bundle.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="../../engine/js/jquery.min.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="../../engine/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="../../engine/js/angular.min.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="../../engine/js/modernizr-custom.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/owl.carousel.min.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/owl.accessibilityLayer.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/app-run.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/app-controler.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="localisation/localisation.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript" charset="UTF-8">
+        //obfusquer
+        this.tracker = null;
+        this.params = {
+            //Texte du titre
+            title: "How I can contribute to the acoustic performance of our parts?",
+            //Texte du sous titre
+            subtitle: "A good part is not only a part which matches with a checking fixture. Its weight has to meet its target, but first, its acoustic performance must be at the required level.<br\/><br\/>To achieve the requested performance, everyone must bring its contribution:",
+            //Les items de la liste
+            items: {
+                "onglet_1": {text: "<span>Sales have to collect the Customer acoustic need.<br\/><br\/><br\/><br\/><br\/><br\/><br\/><br\/>Costing &amp; Experts have to define the materials to use and the acoustic system to answer to the Customer Request and quote them.<\/span>", illustration: "Carrousel1-specification-costing_concept.jpg", illustrationAlt:"illusAlt1"},
+                "onglet_2": {text: "<span>Sales &amp; Program Acquisition Team have to sold our offer to the Customer.<br\/><br\/><br\/><br\/><br\/><br\/><br\/><br\/>Design &amp; Development have to design the parts to achieve our commitments on the Customer Request with a CAD, a BOM, material Specifications, KPC…<\/span>", illustration: "Carrousel2-sales-design.jpg", illustrationAlt:"illusAlt2"},
+                "onglet_3": {text: "<span>Tooling department has to supply the tools to produce the requested part with its requested performance.<br\/><br\/><br\/><br\/><br\/><br\/><br\/>Manufacturing and Plant industrialization team have to set the machinery and the methodes needed to produce this part with its requested performance controlled by some KCC.<\/span>", illustration: "Carrousel3-tool-manufacturing.jpg", illustrationAlt:"illusAlt3"},
+                "onglet_4": {text: "<span>Purchasing team (for the bought components and materials) and internal raw material producers have to give the appropriate materials with the need characteristics (through KPC and Specifications) to produce the good parts with the required performance.<br\/><br\/><br\/><br\/><br\/><br\/>Production Department has to produce every day the ordered parts with its requested performance in an efficient way.<\/span>", illustration: "Carrousel4-purchasing-production.jpg", illustrationAlt:"illusAlt4"},
+                "onglet_5": {text: "<span>Logistics Department has to organize the components &amp; materials supplying but also the parts ordered by the Customer in keeping their performances during the transport.<br\/><br\/><br\/><br\/><br\/><br\/><br\/>Quality department is the guarantor that everyone do what is needed to achieve the requested performance through validation tests (PVP) and a Control Plan (CP).<\/span>", illustration: "Carrousel5-logistic-quality.jpg", illustrationAlt:"illusAlt5"},
+                "onglet_6": {text: "<span>Like that, we can earn and keep the Customer confidence in our know-how: The Acoustics !<\/span>", illustration: "Carrousel11-acoustics.JPG", illustrationAlt:"illusAlt6"},
+            },
+            //son associé à l'écran
+            sound: ""
+        };
+        var bridge = null;
+
+        function setTracker(pBridge) {
+            bridge = pBridge;
+            setTimeout(function(){
+                //Initialisation du jeu lorsque la communication avec la meta à été établie
+                $("#container").scope().init();
+                $("#container").scope().$apply();
+            }, 10);
+        }
+
+        //finobfusquer
+    </script>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <defs>
+            <symbol id="icon-next" viewBox="0 0 174.2 110.2">
+                <polygon
+                points="20.2,47.5 20.2,62.9 124.6,62.8 100.8,86.5 111.7,97.4 154,55.1 111.7,12.8 100.8,23.7 124.6,47.4"/>
+            </symbol>
+            <symbol id="icon-previous" viewBox="0 0 174.2 110.2">
+                <polygon points="133.8,49.9 133.8,34.5 29.4,34.6 53.2,10.9 42.3,0 0,42.3 42.3,84.6 53.2,73.7 29.4,50 "/>
+            </symbol>
+            <symbol id="icon-cross" viewBox="0 0 20.3 20.3">
+                <path d="M11.6,10.2L20,1.7c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0l-8.4,8.4L1.7,0.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l8.4,8.4l-8.4,8.4
+                    c-0.4,0.4-0.4,1,0,1.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l8.4-8.4l8.4,8.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3
+                    c0.4-0.4,0.4-1,0-1.4L11.6,10.2z"/>
+            </symbol>
+        </defs>
+    </svg>
+</head>
+
+<body id="carrousel"
+      ng-app="cannelle_app">
+<div id="container"
+     role="main"
+     ng-controller="cannelle_appCtrl">
+    <div class="container-fluid">
+        <div class="row minh-100 align-items-end justify-content-center">
+            <div class="col-12 justify-content-center delayed flex-column carousel">
+                <div class="row align-items-center justify-content-center z-index-10 m-auto px-0 pb-lg-3 col-12 col-sm-12 col-md-10 col-xl-8 col-tablet"
+                     ng-if="subtitle!=''">
+                    <div id="bandeau-titre" class="d-flex bandeau">
+                        <h2 class="fadeInDown blockquote my-3 px-3 py-1 mx-auto"
+                            ng-class="{true:'',false:'hide'}[subtitle != '']"
+                            ng-bind-html="subtitle">
+                        </h2>
+                    </div>
+                </div>
+                <div class="owl-carousel overflow-md-inherit py-0">
+                    <div data-id="{{key}}"
+                         ng-repeat="(key,value) in items"
+                         ng-if="isSlideActive(value)">
+                        <div class="row justify-content-center align-items-stretch content m-auto col-tablet py-1"
+                             ng-class="{true:'col-md-11 col-xl-10',false:'col-md-10 col-xl-8'}[value.illustration != '']">
+                            <div class="col-12 col-md col-content sticky-md d-md-flex fadeInDown p-0 pr-xl-4 pr-md-3"
+                                 ng-if="value.illustration != ''">
+                                <div class="m-auto d-md-flex flex-column w-md-100 h-100 fadeInUp">
+                                    <!--Picture-->
+                                    <div class="m-auto d-flex justify-content-center align-items-center h-100"
+                                       data-toggle="modal" data-target="#modal-img-{{$index + 1}}">
+                                        <a class="bg-img bg-blend shadow rounded d-flex justify-content-center align-items-center maxheight sticky-md"
+                                           href="#">
+                                            <img class="rounded w-100"
+                                                 src="{{value.illustration}}"
+                                                 alt="{{value.illustrationAlt}}">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md sticky-md d-md-flex align-self-center p-0"
+                                 ng-if="value.text != ''"
+                                 ng-class="{true:'pl-md-3 pl-xl-4 pr-md-0 col-content',false:'mw-100'}[value.illustration != '']">
+                                <div class="m-auto d-md-flex flex-column w-100 py-3">
+                                    <p class="my-0 text"
+                                         ng-bind-html="value.text"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-control d-md-flex justify-content-end position-sticky bottom-0 z-index-10"
+                 role="navigation" aria-label="{{getLocalisedString('aria_controles_diapo')}}">
+                <div class="navContainer d-flex align-items-center m-auto justify-content-center py-3 py-md-4 w-100">
+                    <div class="owl-dots">
+                    </div>
+                </div>
+            </div>
+            <div class="owl-nav d-none d-md-flex">
+            </div>
+
+        </div>
+        <!-- modal -->
+        <div id="modal-img-{{$index + 1}}" class="modal modal-full fade justify-content-center p-0"
+             tabindex="-1"
+             role="dialog" aria-hidden="true" aria-labelledby="modal-img-{{$index + 1}}"
+             ng-repeat="(key,value) in items">
+            <div class="modal-dialog modal-dialog-centered flex-column px-4 minh-auto mw-100 align-self-center"
+                 role="document">
+                <img class="img-fluid windowheight m-auto py-3 w-auto"
+                     alt="{{value.illustrationAlt}}"
+                     ng-src="{{value.illustration}}">
+                     <button type="button" class="d-flex btn btn-close bg-primary-color text-center" data-dismiss="modal" aria-label="Close">
+                        <svg class="icon-tiny fill-on-primary-color align-self-center">
+                            <use href="#icon-cross"></use>
+                        </svg>
+                    </button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

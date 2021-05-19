@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>CompletionLibre_html</title>
+    <link href="../../engine/css/screens.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../../engine/css/fonts.css" rel="stylesheet" type="text/css"/>
+    <link href="../../engine/css/customization.css" rel="stylesheet" type="text/css"/>
+    <link href="css/screen.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" charset="UTF-8" src="../../engine/js/polyfills/css-vars-ponyfill.min.js"></script>
+    <script type="text/javascript" src="../../engine/js/polyfills/webp-polyfills.js"></script>
+    <script type="text/javascript" src="../../engine/js/polyfills/webp-hero.bundle.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="../../engine/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../engine/js/polyfills/angular-polyfill.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="../../engine/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="../../engine/js/angular.min.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="../../engine/js/modernizr-custom.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/app-run.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="js/app-controler.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="localisation/localisation.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript" charset="UTF-8">
+        //obfusquer
+        this.tracker = null;
+        this.params = {
+            //Identifiant de l'interaction scorm
+            id: "Activity3-Question2",
+            //Titre de l'exercice
+            exo_title: "Rear area:",
+            //Enoncé de l'exercice
+            statement: "How do we treat it?<br\/><br\/>[Fill in the blank with the words: \"absorption\"; \"insulation\"; \"absorption and insulation\"]",
+            //Consigne de l'exercice
+            consigne: "Fill in the blanks with the correct answers, then click on the validate button.",
+            timerPourEcran: "-1",
+            //Illustration de la question
+            illustration: "Rear-area.jpg",
+            illustrationAlt: "illusAlt",
+            //label de reussite
+            lbl_reussite: "Correct",
+            //label d'echec
+            lbl_echec: "Incorrect",
+            //Textes de feedback tentatives
+            //Lorsque réussie
+            feedbackAttemptRight: "Yes, it's the right answer.",
+            //Lorsqu'échouée
+            feedbackAttemptWrong: "No, it's not the right anwser.",
+            //Feedback (valeurs possibles : rien, un texte ou une image)
+            feedbackFinal: {
+                feedbackText: "<span>In this area, the parts have also some other functions to provide as: Aspect, Luggages resistance, Modularity… <\/span>",
+                feedbackImage: "Attention.JPG",
+                feedbackImageAlt: "illusAltFeedback"
+            },
+            scoring: "1", //global / item
+            scoringAmount: 1, //Score donné à l'exercice si global ou bien donné par item
+            nbtries: 1, //Nombre d'essais possibles
+            //Type de correction
+            //0 : Pas de correction
+            //1 : On montre ce qui est faux
+            //2 : On montre ce qu'il fallait faire
+            //3 : On montre ce qui est faux et ce qu'il fallait faire
+            correction: 3,
+            //Texte à compléter
+            text: "Rear area is a closed area, with noise coming from wheels, aerodynamic and exhaust for ICE.<br\/><br\/>To reduce the noise level inside the trunk compartment, our parts bring [absorption].<br\/><br\/>To limit noise transmission from outside to inside, these parts provide also [insulation].",
+            //Respect de la casse
+            useCase: false,
+            //son associé à l'écran
+            sound: "",
+            messageFinBad:"Vous ne remportez pas de points",
+            messageFinGood:"Vous remportez"
+        };
+
+        function setScoringAmount() {
+            if (params.scoring == "0") {
+                params.scoringAmount = 0;
+                params.scoring = "aucun"
+            } else if (params.scoring == "1") {
+                params.scoringAmount = 1;
+                params.scoring = "Par question répondu"
+            } else if (params.scoring == "2") {
+                params.scoringAmount = 1;
+                params.scoring = "Par choix"
+            }
+        }
+
+        setScoringAmount();
+
+        var bridge = null;
+
+        function setTracker(pBridge) {
+            bridge = pBridge;
+            //Initialisation du jeu lorsque la communication avec la meta à été établie
+            setTimeout(function () {
+                bridge.lockMeta();
+                $("#container").scope().init();
+                $("#container").scope().$apply();
+            }, 3000);
+        }
+
+        //finobfusquer
+    </script>
+
+</head>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <defs>
+        <symbol id="icon-cross" viewBox="0 0 20.3 20.3">
+            <path d="M11.6,10.2L20,1.7c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0l-8.4,8.4L1.7,0.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l8.4,8.4l-8.4,8.4
+                c-0.4,0.4-0.4,1,0,1.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l8.4-8.4l8.4,8.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3
+                c0.4-0.4,0.4-1,0-1.4L11.6,10.2z"/>
+        </symbol>
+    </defs>
+</svg>
+<body id="completionLibre"
+      ng-app="cannelle_app">
+<div id="container"
+     role="main"
+     ng-controller="cannelle_appCtrl">
+
+    <style>
+        .maxheight {
+            max-height:{{getMaxHeight()}};
+        }
+        .minheight {
+            min-height:{{getMinHeight()}};
+        }
+    </style>
+
+    <script>
+        // L'écran étant long à s'initialiser il faut cacher le bouton "suivant" pour éviter tout clic malencontreux d'un utilisateur.
+        $('#btn-next', window.parent.document).addClass("hidden-btn");
+        $('#btn-previous', window.parent.document).addClass("hidden-btn");
+        $(".loader-container").show();
+    </script>
+
+    <div class="container-fluid">
+        <div class="row delayed h-100 fh-100 minh-100 align-items-center justify-content-center">
+            <div class="position-absolute invisible">
+                <div id="dummy_{{key}}" class="dummytext"
+                     ng-repeat="(key,resultMapItem) in resultMap"
+                     ng-bind-html="resultMapItem">
+                </div>
+                <div id="dummy_correction_{{key}}" class="dummytext"
+                     ng-repeat="(key,value) in getAllCorrections() track by $index"
+                     ng-bind-html="value">
+                </div>
+            </div>
+
+            <!-- loader -->
+            <div class="loader-container stroke-secondary-color">
+                <svg class="filler-loader"
+                     viewBox="0 0 100 100">
+                    <circle class="fill-path stroke-title-color"
+                            cx="50" cy="50" r="40"/>
+                </svg>
+            </div>
+
+            <!--Bloc main-->
+            <div class="col-12 col-sm-12 d-md-flex justify-content-center align-items-stretch flex-column col-tablet"
+                 ng-class="{true:'col-md-11 col-xl-10',false:'col-md-10 col-xl-8'}[illustration != '']"
+                 ng-switch="currentPage">
+                <div class="d-md-flex w-100 justify-content-center align-items-stretch delayed content"
+                     ng-switch-when="main">
+                    <div class="col col-content d-md-flex order-md-first fadeInDown maxh-100 minh-100 sticky-md pr-xl-4 pr-md-3 px-0"
+                         ng-if="illustration != ''">
+                        <div class="m-auto d-md-flex flex-column w-md-100 h-100 py-3">
+                            <!--Picture-->
+                            <div class="m-auto d-flex justify-content-center align-items-center h-100"
+                               data-toggle="modal" data-target="#modal-img">
+                                <a class="bg-img rounded shadow justify-content-center align-items-center m-auto"
+                                   href="#">
+                                    <img class="rounded"
+                                         src="{{illustration}}"
+                                         alt="{{illustrationAlt}}">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-md-flex maxh-100 minh-xl-100 w-0 p-0 m-0">
+                    </div>
+                    <div class="col col-content px-0 d-md-flex order-first flex-column"
+                         ng-class="{true:'pl-xl-4 pl-md-3',false:'mw-100'}[illustration != '']">
+                        <div class="m-auto d-md-flex flex-column w-100 py-3">
+                        <!--Bandeau Titre-->
+                            <div class="d-md-flex w-100 justify-content-center align-items-center"
+                                 ng-if="getExoTitle()!=''">
+                                <div id="bandeau-titre" class="d-flex w-100 bandeau">
+                                    <h2 class="fadeInDown blockquote my-3 px-3 py-1"
+                                        ng-bind-html="statement">
+                                    </h2>
+                                </div>
+                            </div>
+                            <!--Correction-->
+                            <div id="exercice" class="d-md-flex flex-column w-100 fadeInUp delayed"
+                                 ng-hide="!showCorrection">
+                                <p class="textToReplace p"
+                                     ng-showtext-correction-directive>
+                                </p>
+                            </div>
+                            <!--Exercice-->
+                            <div id="correction" class="d-md-flex flex-column w-100 fadeInUp delayed"
+                                 ng-hide="showCorrection">
+                                <p class="textToReplace my-0"
+                                     ng-showtext-directive>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Modal-->
+            <div id="modal-img" class="modal modal-full fade justify-content-center p-0"
+                 tabindex="-1"
+                 role="dialog" aria-labelledby="modal-img" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered flex-column px-4 minh-auto mw-100 align-self-center"
+                     role="document">
+                    <img class="img-fluid maxheight m-auto py-3 w-auto"
+                         alt="{{illustrationAlt}}"
+                         ng-src="{{illustration}}">
+                        <button type="button" class="d-flex btn btn-close bg-primary-color text-center" data-dismiss="modal" aria-label="Close">
+                        <svg class="icon-tiny fill-on-primary-color align-self-center">
+                            <use href="#icon-cross"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+.list-group-item {
+    border:0;
+    border-left: 0px solid;
+    transition: border-left .2s ease;
+    border-radius: 3px!important;
+    border-color: var(--secondary-color);
+    
+}
+
+.list-group-item:hover,.list-group-item:focus {
+    border-left: 7px solid;
+}
+
+.list-group-item {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+.list-group-item:hover, .list-group-item:focus	 {
+    background-color: var(--secondary-color);
+    color: var(--on-secondary-color);
+    border-color: var(--on-secondary-color);
+}
+.list-group-item:hover .media-body, .list-group-item:focus .media-body	 {
+    color: var(--on-secondary-color);
+    border-color: var(--secondary-color);
+}
+
+
+.list-group-item-action svg {
+    fill: #333;
+}

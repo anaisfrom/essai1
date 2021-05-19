@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.88, user-scalable=no, maximum-scale=0.88" />
+	<title>Video_html</title>
+	<link href="../../engine/css/screens.min.css" rel="stylesheet" type="text/css" />
+	<link href="../../engine/css/fonts.css" rel="stylesheet" type="text/css"/>
+	<link href="../../engine/css/customization.css" rel="stylesheet" type="text/css"/>
+	<link href="css/screen.css" rel="stylesheet" type="text/css" />
+	<link href="css/video-js.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/polyfills/css-vars-ponyfill.min.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/jquery.min.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/angular.min.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/video.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/media.youtube.js"></script>
+	<script type="text/javascript" src="https://api.dmcdn.net/all.js"></script>
+	<script type="text/javascript" src="https://player.vimeo.com/api/player.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="js/app-run.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="js/app-controler.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="localisation/localisation.js"></script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script type="text/javascript" charset="UTF-8">
+//obfusquer
+		this.tracker = null;
+		this.params = {
+			//Texte du titre
+			title: "How is managed the acoustic comfort with our parts?",
+			//Texte associé,
+			text: "<span>Before learning how we develop acoustic comfort in a car, please have a look on this short movie illustrating possibilities to reduce music transmission of a guitar.<br\/><br\/>(Switch ON your sound device!)<\/span>",
+			//url de la video
+			url: "https:\/\/vimeo.com\/523675227\/b76093e71a",
+			transcription: "",
+			//son associé à l'écran
+			sound: ""
+		};
+		var bridge = null;
+		function setTracker(pBridge){
+			bridge = pBridge;
+			//Initialisation du jeu lorsque la communication avec la meta à été établie
+			setTimeout(function(){
+				$("#container").scope().init();
+				$("#container").scope().$apply();
+			}, 10);
+		}
+//finobfusquer
+	</script>
+
+</head>
+
+<body ng-app="cannelle_app" id="video">
+<div id="container"
+	 role="main"
+	 ng-controller="cannelle_appCtrl">
+	<div class="container-fluid">
+		<div class="row delayed h-100 fh-100 minh-100 align-items-center justify-content-center">
+			<!--Bloc main-->
+			<div class="col-12 col-sm-12 col-md-10 col-xl-8 py-3 py-md-3 py-lg-5 py-xl-5 col-tablet">
+				<div class="m-auto flex-column w-100 px-md-3 content">
+
+					<!-- Texte -->
+					<div class="h-100 minheight delayed">
+						<div class="text-box fadeInUp mb-2 mt-3"
+							 ng-if="text != ''">
+							<p class="text"
+							   ng-bind-html="text">
+							</p>
+						</div>
+					</div>
+
+					<!--Media Player-->
+					<div class="m-auto flex-column w-100 videoarea fadeInUp"
+						 ng-switch="videoType">
+						<!-- loader -->
+						<div class="loader-container"
+							 ng-if="displayLoader == true">
+							<svg class="filler-loader"
+								 viewBox="0 0 100 100">
+								<circle class="fill-path stroke-secondary-color"
+										cx="50" cy="50" r="40"/>
+							</svg>
+						</div>
+						<!--Video player-->
+						<div id="video-player">
+							<!--Youtube-->
+							<div id="youtubePlayer" class="shadow-lg rounded h-100"
+								 ng-switch-when="youtube">
+							</div>
+							<!--DailyMotion-->
+							<div ng-switch-when="dailymotion" class="h-100">
+								<div id="dailymotionPlayer" class="shadow-lg rounded h-100"></div>
+							</div>
+							<!--Vimeo-->
+							<div id="vimeoPlayer" class="shadow-lg rounded h-100"
+								 ng-switch-when="vimeo">
+
+							</div>
+							<!--local-->
+							<video id="localPlayer" class="video-js vjs-theme-sea shadow-lg rounded h-100"
+								   controls="" preload="auto" poster="data:image/gif,AAAA"
+								   ng-switch-when="local">
+								<track default/>
+							</video>
+							<!--Libcast-->
+							<iframe id="libcastPlayer"
+									height='100%' allowfullscreen type="text/html" frameborder="0"
+									ng-switch-when="libcast"
+									ng-class="{true:'videobig'}[text=='']">
+							</iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--EndOf Bloc Main-->
+		</div>
+	</div>
+</div>
+</body>
+
+</html>

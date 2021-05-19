@@ -1,0 +1,233 @@
+label {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0rem;
+}
+
+input:checked + .radio-custom-label:before {
+    color:var(--secondary-color);
+}
+
+input:checked + .radio-custom-label:before, .ng-not-empty .radio-custom-label::before {
+    background:var(--secondary-color);
+}
+
+u{
+    border-color: var(--secondary-color);
+}
+
+
+.nav-stacked > div {
+  margin-bottom: 10px;
+  position: relative;
+  border-radius: 3px;
+}
+
+.nav-stacked>button {
+  float: none;
+}
+.nav-stacked>button {
+  float: left;
+}
+.rtl .nav-stacked>button {
+  float: right;
+}
+
+.nav>button {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+input ::-ms-expand {
+  display:none;
+}
+
+input[type=radio]::-ms-check,.radio-custom::-ms-check{
+  display: none;
+}
+
+
+/* RADIO */
+
+input[type='checkbox']:checked:focus {
+  right: 2px;
+  top: 2px;
+  bottom: 2px;
+}
+.rtl input[type='checkbox']:checked:focus {
+  left: 2px;
+  right: inherit;
+}
+
+input[type='checkbox'] + .radio-custom-label > div:last-child {
+  width: 50px;
+      height: 100%;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      display: flex;
+      padding: 5px 1px 0 0;
+}
+.rtl input[type='checkbox'] + .radio-custom-label > div:last-child {
+  left: 0;
+  right: inherit;
+}
+
+input[type='checkbox']{
+  width: 50px;
+}
+
+input[type='checkbox'] + .radio-custom-label{
+  position: relative;
+}
+input[type='checkbox'] + .radio-custom-label > ins{
+  text-decoration: none;
+}
+input[type='checkbox'] + .radio-custom-label > ins > i{
+
+  font-style: normal;
+}
+input[type='checkbox']{
+  width: 50px;
+  box-shadow: inset 0px 0px 0px 0px ;
+  border-radius: 2px;
+  transition: box-shadow 100ms cubic-bezier(.4,.0,.23,1);
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  bottom: 2px;
+  color: var(--on-secondary-color);
+  height: calc(100% - 5px);
+}
+
+input[type='checkbox']:checked, .forgotten input[type='checkbox'], .correct input[type='checkbox'], .incorrect input[type='checkbox']{
+  height: calc(100% - 4px);
+}
+
+.rtl input[type='checkbox']{
+  left: 2px;
+  right: inherit;
+}
+
+input[type='checkbox']:focus{
+  outline: 0;
+}
+input[type='checkbox']:focus > span{
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+
+
+.rtl .nav-stacked:not(.finish) div:hover input[type='checkbox']:checked {
+  left: 2px;
+  right: inherit;
+}
+
+@keyframes shrink-bounce{
+  0%{
+    transform: scale(1);
+  }
+  33%{
+    transform: scale(.85);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+.radio-custom-label p {
+  font-weight: 400;
+}
+
+.radio-custom-label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 0;
+  min-height: 50px;
+  width: 100%;
+  padding: 20px 60px 20px 20px;
+  border-radius: 1px;
+  position: relative;
+}
+.rtl .radio-custom-label {
+  padding: 20px 20px 20px 60px;
+}
+.radio-custom, input[type=radio] {
+  margin: 0;
+}
+
+.radio-custom.radio {
+  border-radius: 50%;
+}
+.radio-custom.radio::after {
+  border-radius: 50%;
+}
+
+.radio-custom-label::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 3px;
+  background: transparent;
+
+}
+
+.radio-custom {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: absolute;
+  right: 30px;
+  width: 50px;
+  border-radius: 3px;
+}
+.rtl .radio-custom {
+  left: 30px;
+}
+
+.question li p {
+  cursor: pointer;
+}
+
+.question .radio-custom-label{
+  cursor: pointer;
+}
+
+
+
+
+.finish  div:hover .radio-custom-label::before, .finish  input:focus + .radio-custom-label::before {
+  border-bottom: 1px solid;
+
+}
+
+.finish .correct .radio-custom-label::before,.finish .incorrect .radio-custom-label::before ,.finish .forgotten .radio-custom-label::before  {
+  border-bottom: 0px solid !important;
+}
+
+
+.finish .radio-custom-label,.finish .radio-custom-label, .finish li p, .finish li .radio-custom-label div {
+  cursor: default !important;
+
+}
+
+.finish div:hover .radio-custom-label div, .finish input:focus + .radio-custom-label div  {
+  transform: translate(0,0);
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+}
+
+.correct,.incorrect,.forgotten {
+  background-color: transparent;
+}

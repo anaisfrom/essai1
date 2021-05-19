@@ -1,0 +1,49 @@
+
+.videoarea {
+  position: relative;
+  padding-bottom: 57.5%;
+}
+
+.videoarea {
+}
+
+#video-player{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
+.video-js {
+  width: 100%;
+  padding: 25px;
+  border-radius: 5px;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1'  width='100px' height='100px' fill='#fff' viewBox='0 0 124.512 124.512' xml:space='preserve'%3E%3Cpath d='M113.956 57.006l-97.4-56.2c-4-2.3-9 0.6-9 5.2v112.5c0 4.6 5 7.5 9 5.2l97.4-56.2C117.956 65.105 117.956 59.306 113.956 57.006z'/%3E%3C/svg%3E");
+  background-position: 50% 50%;
+  background-repeat:no-repeat;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .videoarea {
+        width: 100%;
+  }
+}
+
+iframe {
+        width: 100%!important;
+        height: 100%!important;
+}
+
+.btn-transcription:hover,.btn-transcription:focus {
+  background-color: var(--secondary-color);
+  color: var(--on-secondary-color); 
+}
+
+.btn-transcription {
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--on-primary-color);
+
+}

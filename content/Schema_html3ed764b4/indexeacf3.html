@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.88, user-scalable=no, maximum-scale=0.88" />
+	<title>Schema_html</title>
+	<link href="../../engine/css/screens.min.css" rel="stylesheet" type="text/css" />
+	<link href="../../engine/css/fonts.css" rel="stylesheet" type="text/css"/>
+	<link href="../../engine/css/customization.css" rel="stylesheet" type="text/css"/>
+	<link href="css/screen.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/polyfills/css-vars-ponyfill.min.js"></script>
+    <script type="text/javascript" src="../../engine/js/polyfills/webp-polyfills.js"></script>
+    <script type="text/javascript" src="../../engine/js/polyfills/webp-hero.bundle.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/jquery.min.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/angular.min.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/modernizr-custom.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="js/app-run.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="js/app-controler.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="localisation/localisation.js"></script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script type="text/javascript" charset="UTF-8">
+	//obfusquer
+	this.tracker = null;
+	this.params = {
+		//Texte du titre
+		title: "Introduction  (1)",
+		//Texte du sous titre
+		subtitle: "<span>Why acoustics is important?<\/span>",
+		//Lien vers l'illustration
+		illustration: "introduction-page1.jpg",
+		illustrationAlt: "illusAlt",
+		//son associé à l'écran
+		sound: ""
+	};
+	var bridge = null;
+	function setTracker(pBridge){
+		bridge = pBridge;
+		//Initialisation du jeu lorsque la communication avec la meta à été établie
+		setTimeout(function(){
+			$("#container").scope().init();
+			$("#container").scope().$apply();
+		}, 10);
+	}
+	//finobfusquer
+	</script>
+</head>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <defs>
+        <symbol id="icon-cross" viewBox="0 0 20.3 20.3">
+            <path d="M11.6,10.2L20,1.7c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0l-8.4,8.4L1.7,0.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l8.4,8.4l-8.4,8.4
+                c-0.4,0.4-0.4,1,0,1.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l8.4-8.4l8.4,8.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3
+                c0.4-0.4,0.4-1,0-1.4L11.6,10.2z"/>
+        </symbol>
+    </defs>
+</svg>
+<body id=schema
+	  ng-app="cannelle_app">
+	<div id="container"
+		 role="main"
+		 ng-controller="cannelle_appCtrl">
+		<div class="container-fluid">
+			<div class="row delayed h-100 fh-100 minh-100 align-items-center justify-content-center">
+				<div class="col-12 col-sm-12 col-md-10 col-xl-8 delayed row justify-content-center align-items-center content col-tablet">
+					<!--Bandeau Titre-->
+					<div class="col-12">
+						<div id="bandeau-titre" class="d-flex bandeau px-0">
+							<h1 class="fadeInDown blockquote my-3 my-xl-4 px-3 mx-auto"
+								ng-bind-html="subtitle"
+								ng-if="subtitle!=''">
+							</h1>
+						</div>
+					</div>
+					<div class="col-auto"
+						 data-toggle="modal" data-target="#modal-img">
+						<a class="justify-content-center align-items-center fadeIn bg-img-contain m-auto text-center"
+						   href="#">
+							<img class="rounded maxheight mw-100"
+								 src="{{illustration}}"
+								 alt="{{illustrationAlt}}">
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--Modal 1-->
+			<div id="modal-img" class="modal modal-full fade justify-content-center p-0"
+				 tabindex="-1"
+				 role="dialog" aria-labelledby="modal-img" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered flex-column px-4 minh-auto align-self-center mw-100"
+					 role="document">
+					<img class="img-fluid maxh-100 m-auto py-3 w-auto"
+						 alt="{{illustrationAlt}}"
+						 ng-src="{{illustration}}">
+						 <button type="button" class="d-flex btn btn-close bg-primary-color text-center" data-dismiss="modal" aria-label="Close">
+                            <svg class="icon-tiny fill-on-primary-color align-self-center">
+                                <use href="#icon-cross"></use>
+                            </svg>
+                        </button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

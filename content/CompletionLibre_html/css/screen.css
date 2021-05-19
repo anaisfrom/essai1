@@ -1,0 +1,152 @@
+.item input, .item textarea {
+    text-align: center;
+    -webkit-appearance: none !important;
+    border-radius: 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    opacity: 1!important;
+}
+
+.item textarea {
+    text-align: left;
+}
+
+.item {
+    box-shadow: 0 1px 0 0;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    display: inline-flex;
+    transition: all .2s ease;
+    border-radius: 3px;
+    line-height: 1.5;
+    opacity: 1!important;
+}
+
+.item:hover, .item:focus {
+    box-shadow: 0 3px 0 0;
+}
+
+.item::after {
+    display: inherit;
+}
+
+.item.correct, .item.incorrect, .item.forgotten {
+    box-shadow: 0 2px 3px -2px, 0 0 0 1px, 0 2px 3px -2px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 0 1px!important;
+    border-radius: 2px;
+}
+
+.item.correct input, .item.incorrect input, .item.forgotten input, .item.correct textarea, .item.incorrect textarea, .item.forgotten textarea {
+    box-shadow: 0 2px 3px -2px, 0 0 0 1px;
+    background-color: #fff!important;
+    width: calc(100% - 30px);
+}
+
+.item input, .item textarea {
+    border-radius: 2px;
+    background-color: var(--background-color);
+    color: inherit;
+    font-weight: 500;
+}
+
+#exercice .item input, #exercice .item textarea {
+    border-radius: 2px;
+    background-color: var(--secondary-color);
+    color: var(--on-secondary-color);
+    font-weight: 500;
+}
+
+.item input:-internal-autofill-selected, .item textarea:-internal-autofill-selected {
+    appearance: menulist-button;
+    background-color: var(--text-color);
+    background-image: none !important;
+    color: var(--background-color);
+}
+
+.textToReplace div {
+    display: inline-block;
+}
+
+.textToReplace label {
+    display: initial;
+    line-height: 2;
+    display: inline;
+}
+
+.dummytext {
+    position: absolute;
+    visibility: hidden;
+    height: auto;
+    width: auto;
+    white-space: nowrap;
+    font-weight: 500 !important;
+    font-size: 1.41em;
+}
+
+#exercice .item {
+    box-shadow: 0 0px 0 0 !important;
+    border-radius: 4px;
+}
+
+#exercice .textToReplace {
+    line-height: 2.1em;
+}
+
+#exercice input, #exercice textarea {
+    padding: 4px 0;
+    margin: -3px 0px;
+}
+
+#correction .item {
+    display: inline-table;
+}
+
+.item {
+    padding: 0.5em;
+    align-items: stretch;
+    display: inline-grid;
+    vertical-align: baseline;
+    align-items: center;
+    position: relative;
+    padding: 0;
+    min-width: 1em;
+}
+
+.item::before {
+    content: attr(data-value) ' ';
+    visibility: hidden;
+    white-space: pre-wrap;
+    grid-area: 2/1;
+    width: auto;
+    min-width: 1.5em;
+    grid-area: 1/2;
+    font: inherit;
+    padding: 0 0.25em;
+    margin: 0;
+    resize: none;
+    background: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+}
+
+input, textarea {
+    grid-area: 2/1;
+    font: inherit;
+    padding: 0;
+    margin: 0;
+    resize: none;
+    background: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    overflow: hidden;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}

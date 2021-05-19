@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.88, user-scalable=no, maximum-scale=0.88" />
+	<title>Enumeration_html</title>
+	<link href="../../engine/css/screens.min.css" rel="stylesheet" type="text/css" />
+	<link href="../../engine/css/fonts.css" rel="stylesheet" type="text/css"/>
+	<link href="../../engine/css/customization.css" rel="stylesheet" type="text/css"/>
+	<link href="css/screen.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/polyfills/css-vars-ponyfill.min.js"></script>
+    <script type="text/javascript" src="../../engine/js/polyfills/webp-polyfills.js"></script>
+    <script type="text/javascript" src="../../engine/js/polyfills/webp-hero.bundle.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/jquery.min.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/angular.min.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="../../engine/js/modernizr-custom.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="js/app-run.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="js/app-controler.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="localisation/localisation.js"></script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<script type="text/javascript" charset="UTF-8">
+	//obfusquer
+	this.tracker = null;
+	this.params = {
+		//Texte du titre
+		title: "How is managed the acoustic comfort with our parts?  (Insulation)",
+		//Texte du sous titre
+		subtitle: "What does it mean insulation?<br\/><br\/>Insulation is a property of a panel to reduce the noise transmission from the back side to the front side.<br\/><br\/>Insulation property is driven by following characteristics:",
+		//Lien vers l'illustration
+		illustration: "Avoid_noise_entrance.jpg",
+		illustrationAlt: "illusAlt",
+		//Liste de l'énumeration
+		enum:{
+			"enum_1":{text:"<span>Airtightness of the panel<\/span>"},
+			"enum_2":{text:"<span>Surface mass of the panel => mass law<\/span>"},
+			"enum_3":{text:"<span>Specific property of the acoustic part on this panel  => Mass-Spring system for example.<\/span>"},
+			"enum_4":{text:""},
+			"enum_5":{text:""},
+			"enum_6":{text:""},
+			"enum_7":{text:""},
+		},
+		//son associé à l'écran
+		sound: "",
+		//Mélange les propositions
+		numbers: false
+	};
+	var bridge = null;
+	function setTracker(pBridge){
+		bridge = pBridge;
+		//Initialisation du jeu lorsque la communication avec la meta à été établie
+		setTimeout(function(){
+			$("#container").scope().init();
+			$("#container").scope().$apply();
+		}, 10);
+	}
+	//finobfusquer
+	</script>
+</head>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <defs>
+        <symbol id="icon-cross" viewBox="0 0 20.3 20.3">
+            <path d="M11.6,10.2L20,1.7c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0l-8.4,8.4L1.7,0.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l8.4,8.4l-8.4,8.4
+                c-0.4,0.4-0.4,1,0,1.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l8.4-8.4l8.4,8.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3
+                c0.4-0.4,0.4-1,0-1.4L11.6,10.2z"/>
+        </symbol>
+    </defs>
+</svg>
+<body id="enumeration"
+	  ng-app="cannelle_app">
+	<div id="container"
+		 role="main"
+		 ng-controller="cannelle_appCtrl">
+		<div class="container-fluid">
+			<div class="row delayed h-100 fh-100 minh-100 align-items-center justify-content-center">
+				<div class="col-12 d-md-flex justify-content-center flex-column align-items-stretch col-tablet"
+					 ng-class="{true:'col-sm-12 col-md-11 col-xl-10',false:'col-sm-12 col-md-10 col-xl-8'}[illustration != '']">
+					<div class="d-md-flex w-100 justify-content-center align-items-stretch delayed content">
+						<!--Illustration-->
+						<div class="col col-content d-md-flex order-md-first fadeInDown maxh-100 minh-100 sticky-md pr-xl-4 pr-md-3 px-0"
+							 ng-if="illustration != ''">
+							<div class="m-auto d-md-flex flex-column w-md-100 h-100 py-3">
+								<div class="m-auto d-flex justify-content-center align-items-center h-100"
+									 data-toggle="modal" data-target="#modal-img" >
+									<a class="bg-img rounded shadow justify-content-center align-items-center m-auto"
+									   href="#">
+										<img class="rounded"
+											 src="{{illustration}}"
+											 alt="{{illustrationAlt}}">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="d-md-flex maxh-100 minh-xl-100 w-0 p-0 m-0">
+						</div>
+						<div class="col col-content px-0 d-md-flex order-first flex-column"
+							 ng-class="{true:'pl-xl-4 pl-md-3 pr-md-0',false:'mw-100'}[illustration != '']">
+							<div class="m-auto d-md-flex flex-column w-100 py-3">
+								<!--Bandeau Titre-->
+								<div class="d-md-flex w-100 justify-content-center align-items-center pb-3 pb-lg-0"
+									 ng-if="subtitle!=''">
+									<div id="bandeau-titre" class="d-flex w-100 bandeau">
+										<h2 class="fadeInDown blockquote my-3 px-3 py-1"
+											ng-bind-html="subtitle">
+										</h2>
+									</div>
+								</div>
+								<div class="d-md-flex flex-column w-100 delayed py-3">
+									<ol class="list-unstyled delayed"
+										ng-if="numbers == true">
+										<li id="{{key}}" class="media mb-3 secondary-color fadeInUp"
+											ng-repeat="(key,value) in enum"
+											ng-if="value.text != ''">
+											<div class="media-body text-color"
+												 ng-bind-html="value.text">
+											</div>
+										</li>
+									</ol>
+									<ul class="list-unstyled delayed"
+										ng-if="numbers == false">
+										<li id="{{key}}" class="media pl-0 secondary-color fadeInUp"
+											ng-repeat="(key,value) in enum"
+											ng-if="value.text != ''">
+											<div class="puce bg-secondary-color"></div>
+											<p class="media-body my-0 text-color"
+											   ng-bind-html="value.text"></p>
+										</li>
+								    </ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				<!--Modal 1-->
+				<div id="modal-img" class="modal modal-full fade justify-content-center p-0"
+					 tabindex="-1"
+					 role="dialog" aria-labelledby="modal-img" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered flex-column px-4 minh-auto mw-100 align-self-center"
+						 role="document">
+						<img class="img-fluid maxheight m-auto py-3 w-auto"
+							 alt="{{illustrationAlt}}"
+							 ng-src="{{illustration}}">
+							 <button type="button" class="d-flex btn btn-close bg-primary-color text-center" data-dismiss="modal" aria-label="Close">
+								<svg class="icon-tiny fill-on-primary-color align-self-center">
+									<use href="#icon-cross"></use>
+								</svg>
+							</button>
+					</div>
+				</div>
+				<!--EndOf Bloc Main-->
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

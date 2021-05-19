@@ -1,0 +1,131 @@
+/*
+Pour modifier les fonts, ajoutez-les au préalable dans le dossier
+"./engine/font/" du fichier de personnalisation puis specifiez les urls
+*/
+
+
+@font-face {
+    font-family: "Montserrat";
+    src: url('../font/Montserrat-Italic.eot');
+    src: url('../font/Montserrat-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../font/Montserrat-Italic.woff2') format('woff2'),
+        url('../font/Montserrat-Italic.woff') format('woff'),
+        url('../font/Montserrat-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: "Montserrat";
+    src: url('../font/Montserrat-Medium.eot');
+    src: url('../font/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../font/Montserrat-Medium.woff2') format('woff2'),
+        url('../font/Montserrat-Medium.woff') format('woff'),
+        url('../font/Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url('../font/Montserrat-Light.eot');
+    src: url('../font/Montserrat-Light.eot?#iefix') format('embedded-opentype'),
+        url('../font/Montserrat-Light.woff2') format('woff2'),
+        url('../font/Montserrat-Light.woff') format('woff'),
+        url('../font/Montserrat-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "Montserrat";
+    src: url('../font/Montserrat-Bold.eot');
+    src: url('../font/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../font/Montserrat-Bold.woff2') format('woff2'),
+        url('../font/Montserrat-Bold.woff') format('woff'),
+        url('../font/Montserrat-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url('../font/Montserrat-Black.eot');
+    src: url('../font/Montserrat-Black.eot?#iefix') format('embedded-opentype'),
+        url('../font/Montserrat-Black.woff2') format('woff2'),
+        url('../font/Montserrat-Black.woff') format('woff'),
+        url('../font/Montserrat-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "Montserrat";
+    src: url('../font/Montserrat-Thin.eot');
+    src: url('../font/Montserrat-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../font/Montserrat-Thin.woff2') format('woff2'),
+        url('../font/Montserrat-Thin.woff') format('woff'),
+        url('../font/Montserrat-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Cera';
+    src: url('../font/Ceraroundpro-Black.woff2') format('woff2'),
+         url('../font/Ceraroundpro-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Cera';
+    src: url('../font/Ceraroundpro-Bold.woff2') format('woff2'),
+         url('../font/Ceraroundpro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Cera';
+    src: url('../font/Ceraroundpro-Medium.woff2') format('woff2'),
+         url('../font/Ceraroundpro-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Cera';
+    src: url('../font/Ceraroundpro-Regular.woff2') format('woff2'),
+         url('../font/Ceraroundpro-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Cera';
+    src: url('../font/Ceraroundpro-Light.woff2') format('woff2'),
+         url('../font/Ceraroundpro-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+
+
+@font-face {
+    font-family: 'Cera';
+    src: url('../font/Ceraroundpro-Thin.woff2') format('woff2'),
+         url('../font/Ceraroundpro-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+
+}

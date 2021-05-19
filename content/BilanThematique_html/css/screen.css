@@ -1,0 +1,234 @@
+.certificate {
+    display: none;
+}
+
+.form-control {
+    min-width:150px;
+}
+
+/* PRINT */
+
+.print  .certificate {
+    padding: 5px;
+    border: 15px solid;
+
+}
+
+.print  .certificate:before {
+    left: 20px;
+}
+.print  .certificate:after {
+    right: 20px;
+}
+.print .certificate .sub {
+    border: 1px solid;
+    border-radius: 3px;
+}
+
+.print  .pagecontent {
+    border: 5px;
+    border-width: 25px 30px 10px 20px;
+    width:100%;
+    height: 100%;
+}
+
+.print .certificate_desc {
+    margin: 20px auto;
+    font-size: 1.3em;
+}
+/*remove standard list and bullet formatting from ul*/
+.print .columns ul
+{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* correct webkit/chrome uneven margin on the first column*/
+.print .columns ul li:first-child
+{
+    margin-top:0px;
+}
+.print .certificate_logo {
+    text-align: center;
+    max-width: 200px;
+    margin: 5px auto 0 auto;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.print .certificate_logo:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    -webkit-print-color-adjust: exact;
+    box-shadow: inset 0 0 0 60px;
+    border:200px inset var(--primary-color);
+}
+
+
+.logo {
+    max-width: 200px;
+}
+
+.print .certificate_title, .print .certificate_logo {
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.print .certificate_title img {
+    padding:20px 0;
+}
+
+.print .certificate_title p {
+    padding:12px;
+    margin: 0;
+}
+
+.print .certificate_subtitle {
+    font-weight: 800;
+    font-size: 1em;
+    text-transform: uppercase;
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.print .certificate_subtitle p {
+    text-align: center;
+
+}
+
+.print .certificate_table th, .print .certificate_table td span  {
+    vertical-align: top;
+}
+
+.print .certificate_content  {
+    text-align: center;
+    /* position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 5em); */
+}
+
+
+
+.print .certificate_content h4 {
+    text-align: center;
+    padding: 20px auto;
+}
+
+.print .certificate_badge {
+    position: relative;
+    margin: 0 auto 15px auto;
+}
+
+
+.print .certificate_badge p {
+    text-align: center;
+    font-size: 3em;
+    font-weight: 400;
+}
+
+
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+    #input-fields-for-certificate {
+        min-width: 510px;
+    }  
+ }
+
+/* A4 */
+
+
+@-moz-document url-prefix() {
+    .book, .certificate {
+        height: 24.65cm;
+    }
+
+    .sub {
+        height: 100%;
+    }
+
+    .print .certificate .sub {
+        position: relative;
+        height: 100%;
+    }
+
+    .print .certificate {
+        position: relative;
+    }
+
+}
+
+
+@media print {
+
+    @page {
+        size: landscape;
+        size: A4 landscape;
+        margin: 0;
+    }
+
+    * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        list-style-position: inside;
+    }
+
+    .print .book {
+        display: block;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .certificate {
+        display: block !important;
+        width: 320mm;
+        min-height: 224.2mm;
+        padding: 0;
+        margin: 0;
+    }
+
+    .sub {
+        height: 212.5mm;
+    }
+
+    .no-print {
+        display: none!important;
+    }
+}
+
+
+
+.card {
+    border: 0;
+    background-color: transparent!important;
+}
+
+.form-control,.input-group-text,.list-group-item {
+    border: 0px!important;
+}
+
+.btn-outline-primary {
+    color: var(--title-color);
+    border-color: var(--title-color);
+}
+.btn-outline-primary:hover,.btn-outline-primary:focus {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--on-secondary-color);
+}
+.btn-outline-primary:active {
+    background-color: var(--primary-color)!important;
+    border-color: var(--primary-color);
+    color: var(--on-secondary-color);
+
+}

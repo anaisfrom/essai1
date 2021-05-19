@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lom xmlns="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM lom.xsd ">
+  <general>
+    <title>
+      <string language="fr">Titre du module</string>
+    </title>
+    <description>
+      <string language="fr">Description du module</string>
+    </description>
+  </general>
+  <lifeCycle>
+    <contribute>
+      <role>
+        <source>LOMv1.0</source>
+        <value>author</value>
+      </role>
+      <entity>begin:vcard
+					fn: Auteur du contenu
+					end:vcard</entity>
+      <date>
+        <dateTime>2007-09-20T09:00:00</dateTime>
+        <description>
+          <string language="x-none">Date du paquetage du module.</string>
+        </description>
+      </date>
+    </contribute>
+  </lifeCycle>
+  <technical>
+    <format>text/xml</format>
+    <location>imsmanifest.xml</location>
+  </technical>
+  <educational>
+    <typicalLearningTime>
+      <duration>P0Y0M0DT1H00M0S</duration>
+      <description>
+        <string language="x-none">La durée de disponibilité apprenant
+					nécessaire pour suivre le module.</string>
+      </description>
+    </typicalLearningTime>
+  </educational>
+</lom>
